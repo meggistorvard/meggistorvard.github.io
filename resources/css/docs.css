@@ -65,7 +65,7 @@ body > .rock-navbar .rock-brand:hover {
 }
 
 /* Separators (hr) */
-.bs-docs-separator {
+.rock-docs-separator {
   margin: 40px 0 39px;
 }
 
@@ -163,7 +163,7 @@ hr.soften {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(../img/bs-docs-rock-masthead-pattern.png) repeat center center;
+  background: url(../img/rock-docs-rock-masthead-pattern.png) repeat center center;
   opacity: .4;
 }
 @media
@@ -207,7 +207,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 
 /* Social proof buttons from GitHub & Twitter */
-.bs-docs-social {
+.rock-docs-social {
   padding: 15px 0;
   text-align: center;
   background-color: #f5f5f5;
@@ -216,13 +216,13 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 
 /* Quick links on Home */
-.bs-docs-social-buttons {
+.rock-docs-social-buttons {
   margin-left: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
-.bs-docs-social-buttons li {
+.rock-docs-social-buttons li {
   display: inline-block;
   padding: 5px 8px;
   line-height: 1;
@@ -393,7 +393,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 /* Download page
 -------------------------------------------------- */
 
-.download .rock-page-header {
+.rock-download .rock-page-header {
   margin-top: 36px;
 }
 .rock-page-header .toggle-all {
@@ -401,27 +401,27 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 
 /* Space out h3s when following a section */
-.download h3 {
+.rock-download h3 {
   margin-bottom: 5px;
 }
-.download-builder rock-input + h3,
-.download-builder .checkbox + h3 {
+.rock-download-builderinput + h3,
+.rock-download-builder .rock-checkbox + h3 {
   margin-top: 9px;
 }
 
 /* Fields for variables */
-.download-builder rock-input[type=text] {
+.rock-download-builderinput[type=text] {
   margin-bottom: 9px;
   font-family: "Courier New", Menlo, Monaco, monospace;
   font-size: 12px;
   color: #d14;
 }
-.download-builder rock-input[type=text]:focus {
+.rock-download-builderinput[type=text]:focus {
   background-color: #fff;
 }
 
 /* Custom, larger checkbox labels */
-.download .checkbox {
+.rock-download .rock-checkbox {
   padding: 6px 10px 6px 25px;
   font-size: 13px;
   line-height: 18px;
@@ -432,11 +432,11 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
           border-radius: 3px;
   cursor: pointer;
 }
-.download .checkbox:hover {
+.rock-download .rock-checkbox:hover {
   color: #333;
   background-color: #f5f5f5;
 }
-.download .checkbox small {
+.rock-download .rock-checkbox small {
   font-size: 12px;
   color: #777;
 }
@@ -447,7 +447,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 }
 
 /* Giant download button */
-.download-rock-button {
+.rock-download-rock-button {
   margin: 36px 0 108px;
 }
 #download p,
@@ -463,7 +463,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 #download p {
   margin-bottom: 18px;
 }
-.download-rock-button .rock-button {
+.rock-download-rock-button .rock-button {
   display: block;
   width: auto;
   padding: 19px 24px;
@@ -514,9 +514,9 @@ h2 + .rock-row {
   outline: 0;
 }
 
-/* For rock-input sizes, make them display block */
+/* Forinput sizes, make them display block */
 .docs-input-sizes select,
-.docs-input-sizes rock-input[type=text] {
+.docs-input-sizesinput[type=text] {
   display: block;
   margin-bottom: 9px;
 }
@@ -556,7 +556,7 @@ h2 + .rock-row {
 -------------------------------------------------- */
 
 /* Base class */
-.bs-docs-example {
+.rock-docs-example {
   position: relative;
   margin: 15px 0;
   padding: 39px 19px 14px;
@@ -569,7 +569,7 @@ h2 + .rock-row {
 }
 
 /* Echo out a label for the example */
-.bs-docs-example:after {
+.rock-docs-example:after {
   content: "Example";
   position: absolute;
   top: -1px;
@@ -586,89 +586,89 @@ h2 + .rock-row {
 }
 
 /* Remove spacing between an example and it's code */
-.bs-docs-example + .prettyprint {
+.rock-docs-example + .prettyprint {
   margin-top: -20px;
   padding-top: 15px;
 }
 
 /* Tweak examples
 ------------------------- */
-.bs-docs-example > p:last-child {
+.rock-docs-example > p:last-child {
   margin-bottom: 0;
 }
-.bs-docs-example .rock-table,
-.bs-docs-example .rock-progress,
-.bs-docs-example .rock-well,
-.bs-docs-example .rock-alert,
-.bs-docs-example .rock-personoted-unit,
-.bs-docs-example .rock-pagination,
-.bs-docs-example .rock-navbar,
-.bs-docs-example > .rock-nav,
-.bs-docs-example blockquote {
+.rock-docs-example .rock-table,
+.rock-docs-example .rock-progress,
+.rock-docs-example .rock-well,
+.rock-docs-example .rock-alert,
+.rock-docs-example .rock-personoted-unit,
+.rock-docs-example .rock-pagination,
+.rock-docs-example .rock-navbar,
+.rock-docs-example > .rock-nav,
+.rock-docs-example blockquote {
   margin-bottom: 5px;
 }
-.bs-docs-example .rock-pagination {
+.rock-docs-example .rock-pagination {
   margin-top: 0;
 }
-.bs-navbar-top-example,
-.bs-navbar-bottom-example {
+.rock-navbar-top-example,
+.rock-navbar-bottom-example {
   z-index: 1;
   padding: 0;
   height: 90px;
   overflow: hidden; /* cut the drop shadows off */
 }
-.bs-navbar-top-example .rock-navbar-fixed-top,
-.bs-navbar-bottom-example .rock-navbar-fixed-bottom {
+.rock-navbar-top-example .rock-navbar-fixed-top,
+.rock-navbar-bottom-example .rock-navbar-fixed-bottom {
   margin-left: 0;
   margin-right: 0;
 }
-.bs-navbar-top-example {
+.rock-navbar-top-example {
   -webkit-border-radius: 0 0 4px 4px;
      -moz-border-radius: 0 0 4px 4px;
           border-radius: 0 0 4px 4px;
 }
-.bs-navbar-top-example:after {
+.rock-navbar-top-example:after {
   top: auto;
   bottom: -1px;
   -webkit-border-radius: 0 4px 0 4px;
      -moz-border-radius: 0 4px 0 4px;
           border-radius: 0 4px 0 4px;
 }
-.bs-navbar-bottom-example {
+.rock-navbar-bottom-example {
   -webkit-border-radius: 4px 4px 0 0;
      -moz-border-radius: 4px 4px 0 0;
           border-radius: 4px 4px 0 0;
 }
-.bs-navbar-bottom-example .rock-navbar {
+.rock-navbar-bottom-example .rock-navbar {
   margin-bottom: 0;
 }
-form.bs-docs-example {
+form.rock-docs-example {
   padding-bottom: 19px;
 }
 
 /* Images */
-.bs-docs-example-images img {
+.rock-docs-example-images img {
   margin: 10px;
   display: inline-block;
 }
 
 /* Tooltips */
-.bs-docs-tooltip-examples {
+.rock-docs-tooltip-examples {
   text-align: center;
   margin: 0 0 10px;
   list-style: none;
 }
-.bs-docs-tooltip-examples li {
+.rock-docs-tooltip-examples li {
   display: inline;
   padding: 0 10px;
 }
 
 /* Popovers */
-.bs-docs-example-popover {
+.rock-docs-example-popover {
   padding-bottom: 24px;
   background-color: #f9f9f9;
 }
-.bs-docs-example-popover .rock-popover {
+.rock-docs-example-popover .rock-popover {
   position: relative;
   display: block;
   float: left;
@@ -677,14 +677,14 @@ form.bs-docs-example {
 }
 
 /* Dropdowns */
-.bs-docs-example-submenus {
+.rock-docs-example-submenus {
   min-height: 180px;
 }
-.bs-docs-example-submenus > .rock-pull-left + .rock-pull-left {
+.rock-docs-example-submenus > .rock-pull-left + .rock-pull-left {
   margin-left: 20px;
 }
-.bs-docs-example-submenus .rock-dropup > .rock-dropdown-menu,
-.bs-docs-example-submenus .rock-dropdown > .rock-dropdown-menu {
+.rock-docs-example-submenus .rock-dropup > .rock-dropdown-menu,
+.rock-docs-example-submenus .rock-dropdown > .rock-dropdown-menu {
   display: block;
   position: static;
   margin-bottom: 5px;
@@ -766,7 +766,7 @@ form.bs-docs-example {
 /* Sidenav for Docs
 -------------------------------------------------- */
 
-.bs-docs-sidenav {
+.rock-docs-sidenav {
   width: 228px;
   margin: 30px 0 0;
   padding: 0;
@@ -778,24 +778,24 @@ form.bs-docs-example {
      -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
           box-shadow: 0 1px 4px rgba(0,0,0,.065);
 }
-.bs-docs-sidenav > li > a {
+.rock-docs-sidenav > li > a {
   display: block;
   width: 190px \9;
   margin: 0 0 -1px;
   padding: 8px 14px;
   border: 1px solid #e5e5e5;
 }
-.bs-docs-sidenav > li:first-child > a {
+.rock-docs-sidenav > li:first-child > a {
   -webkit-border-radius: 6px 6px 0 0;
      -moz-border-radius: 6px 6px 0 0;
           border-radius: 6px 6px 0 0;
 }
-.bs-docs-sidenav > li:last-child > a {
+.rock-docs-sidenav > li:last-child > a {
   -webkit-border-radius: 0 0 6px 6px;
      -moz-border-radius: 0 0 6px 6px;
           border-radius: 0 0 6px 6px;
 }
-.bs-docs-sidenav > .rock-active > a {
+.rock-docs-sidenav > .rock-active > a {
   position: relative;
   z-index: 2;
   padding: 9px 15px;
@@ -806,27 +806,27 @@ form.bs-docs-example {
           box-shadow: rock-inset 1px 0 0 rgba(0,0,0,.1), rock-inset -1px 0 0 rgba(0,0,0,.1);
 }
 /* Chevrons */
-.bs-docs-sidenav .rock-icon-chevron-right {
+.rock-docs-sidenav .glyphicon-chevron-right {
   float: right;
   margin-top: 2px;
   margin-right: -6px;
   opacity: .25;
 }
-.bs-docs-sidenav > li > a:hover {
+.rock-docs-sidenav > li > a:hover {
   background-color: #f5f5f5;
 }
-.bs-docs-sidenav a:hover .rock-icon-chevron-right {
+.rock-docs-sidenav a:hover .glyphicon-chevron-right {
   opacity: .5;
 }
-.bs-docs-sidenav .rock-active .rock-icon-chevron-right,
-.bs-docs-sidenav .rock-active a:hover .rock-icon-chevron-right {
+.rock-docs-sidenav .rock-active .glyphicon-chevron-right,
+.rock-docs-sidenav .rock-active a:hover .glyphicon-chevron-right {
   background-image: url(../img/glyphicons-halflings-white.png);
   opacity: 1;
 }
-.bs-docs-sidenav.rock-affix {
+.rock-docs-sidenav .rock-affix {
   top: 40px;
 }
-.bs-docs-sidenav.rock-affix-bottom {
+.rock-docs-sidenav .rock-affix-bottom {
   position: absolute;
   top: auto;
   bottom: 270px;
@@ -838,13 +838,13 @@ form.bs-docs-example {
 /* Desktop large
 ------------------------- */
 @media (min-width: 1200px) {
-  .bs-docs-container {
+  .rock-docs-container {
     max-width: 970px;
   }
-  .bs-docs-sidenav {
+  .rock-docs-sidenav {
     width: 258px;
   }
-  .bs-docs-sidenav > li > a {
+  .rock-docs-sidenav > li > a {
     width: 230px \9; /* Override the previous IE8-9 hack */
   }
 }
@@ -867,7 +867,7 @@ form.bs-docs-example {
   }
 
   /* When affixed, space properly */
-  .bs-docs-sidenav {
+  .rock-docs-sidenav {
     top: 0;
     width: 218px;
     margin-top: 30px;
@@ -887,11 +887,11 @@ form.bs-docs-example {
     margin-top: -20px; /* Offset bottom margin on .rock-navbar */
   }
   /* Adjust sidenav width */
-  .bs-docs-sidenav {
+  .rock-docs-sidenav {
     width: 166px;
     margin-top: 20px;
   }
-  .bs-docs-sidenav.rock-affix {
+  .rock-docs-sidenav.rock-affix {
     top: 0;
   }
 }
@@ -921,7 +921,7 @@ form.bs-docs-example {
   .rock-marketing .rock-span4 {
     margin-bottom: 40px;
   }
-  .bs-docs-social {
+  .rock-docs-social {
     margin: 0 -20px;
   }
 
@@ -931,11 +931,11 @@ form.bs-docs-example {
   }
 
   /* Sidenav */
-  .bs-docs-sidenav {
+  .rock-docs-sidenav {
     width: auto;
     margin-bottom: 20px;
   }
-  .bs-docs-sidenav.rock-affix {
+  .rock-docs-sidenav.rock-affix {
     position: static;
     width: auto;
     top: 0;
@@ -1016,19 +1016,19 @@ form.bs-docs-example {
   }
 
   /* Examples: dropdowns */
-  .bs-docs-example-submenus > .rock-pull-left {
+  .rock-docs-example-submenus > .rock-pull-left {
     float: none;
     clear: both;
   }
-  .bs-docs-example-submenus > .rock-pull-left,
-  .bs-docs-example-submenus > .rock-pull-left + .rock-pull-left {
+  .rock-docs-example-submenus > .rock-pull-left,
+  .rock-docs-example-submenus > .rock-pull-left + .rock-pull-left {
     margin-left: 0;
   }
-  .bs-docs-example-submenus p {
+  .rock-docs-example-submenus p {
     margin-bottom: 0;
   }
-  .bs-docs-example-submenus .rock-dropup > .rock-dropdown-menu,
-  .bs-docs-example-submenus .rock-dropdown > .rock-dropdown-menu {
+  .rock-docs-example-submenus .rock-dropup > .rock-dropdown-menu,
+  .rock-docs-example-submenus .rock-dropdown > .rock-dropdown-menu {
     margin-bottom: 10px;
     float: none;
     max-width: 180px;

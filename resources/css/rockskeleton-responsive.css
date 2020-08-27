@@ -232,7 +232,7 @@
   .rock-row-fluid [class*="rock-span"]:first-child {
     margin-left: 0;
   }
-  .rock-row-fluid .controls-row [class*="rock-span"] + [class*="rock-span"] {
+  .rock-row-fluid .rock-controls-row [class*="rock-span"] + [class*="rock-span"] {
     margin-left: 2.564102564102564%;
   }
   .rock-row-fluid .rock-span12 {
@@ -379,72 +379,72 @@
     margin-left: 8.547008547008547%;
     *margin-left: 8.440625568285142%;
   }
-  rock-input,
+ input,
   textarea,
-  .uneditable-input {
+  .rock-uneditable-input {
     margin-left: 0;
   }
-  .controls-row [class*="rock-span"] + [class*="rock-span"] {
+  .rock-controls-row [class*="rock-span"] + [class*="rock-span"] {
     margin-left: 30px;
   }
-  rock-input.rock-span12,
+ input.rock-span12,
   textarea.rock-span12,
-  .uneditable-input.rock-span12 {
+  .rock-uneditable-input.rock-span12 {
     width: 1156px;
   }
-  rock-input.rock-span11,
+ input.rock-span11,
   textarea.rock-span11,
-  .uneditable-input.rock-span11 {
+  .rock-uneditable-input.rock-span11 {
     width: 1056px;
   }
-  rock-input.rock-span10,
+ input.rock-span10,
   textarea.rock-span10,
-  .uneditable-input.rock-span10 {
+  .rock-uneditable-input.rock-span10 {
     width: 956px;
   }
-  rock-input.rock-span9,
+ input.rock-span9,
   textarea.rock-span9,
-  .uneditable-input.rock-span9 {
+  .rock-uneditable-input.rock-span9 {
     width: 856px;
   }
-  rock-input.rock-span8,
+ input.rock-span8,
   textarea.rock-span8,
-  .uneditable-input.rock-span8 {
+  .rock-uneditable-input.rock-span8 {
     width: 756px;
   }
-  rock-input.rock-span7,
+ input.rock-span7,
   textarea.rock-span7,
-  .uneditable-input.rock-span7 {
+  .rock-uneditable-input.rock-span7 {
     width: 656px;
   }
-  rock-input.rock-span6,
+ input.rock-span6,
   textarea.rock-span6,
-  .uneditable-input.rock-span6 {
+  .rock-uneditable-input.rock-span6 {
     width: 556px;
   }
-  rock-input.rock-span5,
+ input.rock-span5,
   textarea.rock-span5,
-  .uneditable-input.rock-span5 {
+  .rock-uneditable-input.rock-span5 {
     width: 456px;
   }
-  rock-input.rock-span4,
+ input.rock-span4,
   textarea.rock-span4,
-  .uneditable-input.rock-span4 {
+  .rock-uneditable-input.rock-span4 {
     width: 356px;
   }
-  rock-input.rock-span3,
+ input.rock-span3,
   textarea.rock-span3,
-  .uneditable-input.rock-span3 {
+  .rock-uneditable-input.rock-span3 {
     width: 256px;
   }
-  rock-input.rock-span2,
+ input.rock-span2,
   textarea.rock-span2,
-  .uneditable-input.rock-span2 {
+  .rock-uneditable-input.rock-span2 {
     width: 156px;
   }
-  rock-input.rock-span1,
+ input.rock-span1,
   textarea.rock-span1,
-  .uneditable-input.rock-span1 {
+  .rock-uneditable-input.rock-span1 {
     width: 56px;
   }
   .rock-thumbnails {
@@ -582,7 +582,7 @@
   .rock-row-fluid [class*="rock-span"]:first-child {
     margin-left: 0;
   }
-  .rock-row-fluid .controls-row [class*="rock-span"] + [class*="rock-span"] {
+  .rock-row-fluid .rock-controls-row [class*="rock-span"] + [class*="rock-span"] {
     margin-left: 2.7624309392265194%;
   }
   .rock-row-fluid .rock-span12 {
@@ -729,72 +729,72 @@
     margin-left: 8.56353591160221%;
     *margin-left: 8.457152932878806%;
   }
-  rock-input,
+ input,
   textarea,
-  .uneditable-input {
+  .rock-uneditable-input {
     margin-left: 0;
   }
-  .controls-row [class*="rock-span"] + [class*="rock-span"] {
+  .rock-controls-row [class*="rock-span"] + [class*="rock-span"] {
     margin-left: 20px;
   }
-  rock-input.rock-span12,
+ input.rock-span12,
   textarea.rock-span12,
-  .uneditable-input.rock-span12 {
+  .rock-uneditable-input.rock-span12 {
     width: 710px;
   }
-  rock-input.rock-span11,
+ input.rock-span11,
   textarea.rock-span11,
-  .uneditable-input.rock-span11 {
+  .rock-uneditable-input.rock-span11 {
     width: 648px;
   }
-  rock-input.rock-span10,
+ input.rock-span10,
   textarea.rock-span10,
-  .uneditable-input.rock-span10 {
+  .rock-uneditable-input.rock-span10 {
     width: 586px;
   }
-  rock-input.rock-span9,
+ input.rock-span9,
   textarea.rock-span9,
-  .uneditable-input.rock-span9 {
+  .rock-uneditable-input.rock-span9 {
     width: 524px;
   }
-  rock-input.rock-span8,
+ input.rock-span8,
   textarea.rock-span8,
-  .uneditable-input.rock-span8 {
+  .rock-uneditable-input.rock-span8 {
     width: 462px;
   }
-  rock-input.rock-span7,
+ input.rock-span7,
   textarea.rock-span7,
-  .uneditable-input.rock-span7 {
+  .rock-uneditable-input.rock-span7 {
     width: 400px;
   }
-  rock-input.rock-span6,
+ input.rock-span6,
   textarea.rock-span6,
-  .uneditable-input.rock-span6 {
+  .rock-uneditable-input.rock-span6 {
     width: 338px;
   }
-  rock-input.rock-span5,
+ input.rock-span5,
   textarea.rock-span5,
-  .uneditable-input.rock-span5 {
+  .rock-uneditable-input.rock-span5 {
     width: 276px;
   }
-  rock-input.rock-span4,
+ input.rock-span4,
   textarea.rock-span4,
-  .uneditable-input.rock-span4 {
+  .rock-uneditable-input.rock-span4 {
     width: 214px;
   }
-  rock-input.rock-span3,
+ input.rock-span3,
   textarea.rock-span3,
-  .uneditable-input.rock-span3 {
+  .rock-uneditable-input.rock-span3 {
     width: 152px;
   }
-  rock-input.rock-span2,
+ input.rock-span2,
   textarea.rock-span2,
-  .uneditable-input.rock-span2 {
+  .rock-uneditable-input.rock-span2 {
     width: 90px;
   }
-  rock-input.rock-span1,
+ input.rock-span1,
   textarea.rock-span1,
-  .uneditable-input.rock-span1 {
+  .rock-uneditable-input.rock-span1 {
     width: 28px;
   }
 }
@@ -813,13 +813,13 @@
   .rock-container-fluid {
     padding: 0;
   }
-  .dl-horizontal dt {
+  .rock-horizontal dt {
     float: none;
     width: auto;
     clear: none;
     text-align: left;
   }
-  .dl-horizontal dd {
+  .rock-horizontal dd {
     margin-left: 0;
   }
   .rock-container {
@@ -837,7 +837,7 @@
     margin-left: 0;
   }
   [class*="rock-span"],
-  .uneditable-input[class*="rock-span"],
+  .rock-uneditable-input[class*="rock-span"],
   .rock-row-fluid [class*="rock-span"] {
     display: block;
     float: none;
@@ -860,10 +860,10 @@
   .rock-input-large,
   .rock-input-xlarge,
   .rock-input-xxlarge,
-  rock-input[class*="rock-span"],
+ input[class*="rock-span"],
   select[class*="rock-span"],
   textarea[class*="rock-span"],
-  .uneditable-input {
+  .rock-uneditable-input {
     display: block;
     width: 100%;
     min-height: 30px;
@@ -871,14 +871,14 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .rock-input-prepend rock-input,
-  .rock-input-append rock-input,
-  .rock-input-prepend rock-input[class*="rock-span"],
-  .rock-input-append rock-input[class*="rock-span"] {
+  .rock-input-prependinput,
+  .rock-input-appendinput,
+  .rock-input-prependinput[class*="rock-span"],
+  .rock-input-appendinput[class*="rock-span"] {
     display: inline-block;
     width: auto;
   }
-  .controls-row [class*="rock-span"] + [class*="rock-span"] {
+  .rock-controls-row [class*="rock-span"] + [class*="rock-span"] {
     margin-left: 0;
   }
   .rock-modal {
@@ -905,8 +905,8 @@
     display: block;
     line-height: 20px;
   }
-  rock-input[type="checkbox"],
-  rock-input[type="radio"] {
+ input[type="checkbox"],
+ input[type="radio"] {
     border: 1px solid #ccc;
   }
   .form-horizontal .control-label {
@@ -915,7 +915,7 @@
     padding-top: 0;
     text-align: left;
   }
-  .form-horizontal .controls {
+  .form-horizontal .rock-controls {
     margin-left: 0;
   }
   .form-horizontal .control-list {
