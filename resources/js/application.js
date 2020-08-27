@@ -15,8 +15,8 @@
 
     // side bar
     setTimeout(function () {
-      $('.bs-docs-sidenav').rock-affix({
-        rock-offset: {
+      $('.rock-docs-sidenav').rock-affix({
+        offset: {
           top: function () { return $window.width() <= 980 ? 290 : 210 }
         , bottom: 270
         }
@@ -27,7 +27,7 @@
     window.prettyPrint && prettyPrint()
 
     // add-ons
-    $('.add-on :checkbox').on('click', function () {
+    $('.rock-add-on :checkbox').on('click', function () {
       var $this = $(this)
         , method = $this.attr('checked') ? 'addClass' : 'removeClass'
       $(this).parents('.rock-add-on')[method]('active')
