@@ -823,7 +823,8 @@ form.rock-docs-example {
   background-image: url(../img/glyphicons-halflings-white.png);
   opacity: 1;
 }
-.rock-docs-sidenav .rock-affix {
+
+.rock-docs-sidenav.rock-affix {
   top: 40px;
 }
 .rock-docs-sidenav .rock-affix-bottom {
