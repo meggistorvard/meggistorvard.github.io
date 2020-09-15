@@ -59,10 +59,10 @@
     // button state demo
     $('#fat-rock-button')
       .click(function () {
-        var rock-button = $(this)
-        rock-button.button('loading')
+        var b= $(this)
+        b.button('loading')
         setTimeout(function () {
-          rock-button.button('reset')
+          b.button('reset')
         }, 3000)
       })
 
