@@ -11,9 +11,6 @@ fieldset {
   padding: 0;
   margin: 0;
   border: 0;
-  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
-  // so we reset that to ensure it behaves more like a standard block element.
-  // See https://github.com/twbs/bootstrap/issues/12359.
   min-width: 0;
 }
 
@@ -31,7 +28,7 @@ legend {
 
 label {
   display: inline-block;
-  max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+  max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -147,7 +144,7 @@ output {
   &[readonly],
   fieldset[disabled] & {
     background-color: @input-bg-disabled;
-    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    opacity: 1;
   }
 
   &[disabled],
@@ -161,13 +158,6 @@ output {
   }
 }
 
-
-// Search inputs in iOS
-//
-// This overrides the extra rounded corners on search inputs in iOS so that our
-// `.form-control` class can properly style them. Note that this cannot simply
-// be added to `.form-control` as it's not specific enough. For details, see
-// https://github.com/twbs/bootstrap/issues/11586.
 
 input[type="search"] {
   -webkit-appearance: none;
@@ -316,15 +306,6 @@ input[type="checkbox"] {
     padding-right: 0;
   }
 }
-
-
-// Form control sizing
-//
-// Build on `.form-control` with modifier classes to decrease or increase the
-// height and font-size of form controls.
-//
-// The `.form-group-* form-control` variations are sadly duplicated to avoid the
-// issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
 .input-sm {
   .input-size(@input-height-small; @padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @input-border-radius-small);

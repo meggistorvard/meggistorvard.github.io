@@ -21,38 +21,53 @@
     <![endif]-->
   </head>
 <body>
-
-    <!-- Fixed navbar -->
+ <!-- Fixed navbar -->
     <nav class="rock-navbar rock-navbar-inverse rock-navbar-fixed-top">
-      <div class="rock-container">
-        <div class="rock-navbar-header">
-          <button type="button" class="rock-navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="rock-screenreader-only">Toggle navigation</span>
-            <span class="rock-icon-bar"></span>
-            <span class="rock-icon-bar"></span>
-            <span class="rock-icon-bar"></span>
+      <div class="rock-navbar-inner">
+        <div class="rock-container">
+          <button type="button" class="rock-button rock-button-navbar" data-toggle="collapse" data-target=".rock-nav-collapse">
+          <span class="rock-icon-bar"></span>
+          <span class="rock-icon-bar"></span>
+          <span class="rock-icon-bar"></span>
           </button>
-          <a class="rock-navbar-brand" href="#">Bootstrap theme</a>
+          <a class="rock-brand" href="./index.html">Rockskeleton</a>
+          <div class="rock-nav-collapse rock-collapse">
+            <ul class="rock-nav">
+			  <li class="rock-dropdown">
+				<a href="#" class="rock-dropdown-toggle" data-toggle="dropdown">Rockskeleton <b class="rock-caret"></b></a>
+				<ul class="rock-dropdown-menu">
+				  <li class="rock-active"><a href="./index.html">Home</a></li>
+				  <li class=""><a href="./typography.html">Typography</a></li>
+				  <li class=""><a href="./components.html">Components</a></li>
+				  <li class=""><a href="./grid.html">Grid</a></li>
+				  <li class=""><a href="./javascript.html">JavaScript</a></li>
+				  <li class=""><a href="./extend.html">Extend</a></li>
+				  <li class=""><a href="./getting-started.html">Get started</a></li>
+				  <li class="rock-divider"></li>
+				  <li class=""><a href="./customize.html">Customize</a></li>
+				  <li class=""><a href="./stylecsscode.html">Style css code</a></li>
+				  <li class="rock-divider"></li>
+				  <li><a target="_blank" href="./samplepage/starter-template.html">Starter template</a></li>
+				  <li><a target="_blank" href="./samplepage/carousel.html">Carousel sample</a></li>
+				  <li><a target="_blank" href="./samplepage/fluid.html">Fluid page sample</a></li>
+				  <li><a target="_blank" href="./samplepage/hero.html">Hero sample</a></li>
+				  <li><a target="_blank" href="./samplepage/justified-nav.html">Justified nav sample</a></li>
+				  <li><a target="_blank" href="./samplepage/marketing-narrow.html">Marketing sample</a></li>
+				  <li><a target="_blank" href="./samplepage/signin.html">Signin sample</a></li>
+				  <li><a target="_blank" href="./samplepage/sticky-footer.html">Sticky footer sample</a></li>
+				  <li><a target="_blank" href="./samplepage/sticky-footer-navbar.html">Sticky footer navbar sample</a></li>
+				</ul>
+			  </li>
+			  <li class="rock-dropdown">
+				<a href="#" class="rock-dropdown-toggle" data-toggle="dropdown">Datatable 1.9 <b class="rock-caret"></b></a>
+				<ul class="rock-dropdown-menu">
+				  <li><a href="datatables/examples/index.html">Index</a></li>
+				</ul>
+			  </li>
+			</ul>
+
+          </div>
         </div>
-        <div id="navbar" class="rock-navbar-collapse rock-collapse">
-          <ul class="rock-nav rock-navbar-nav">
-            <li class="rock-active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="rock-dropdown">
-              <a href="#" class="rock-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="rock-caret"></span></a>
-              <ul class="rock-dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="rock-divider"></li>
-                <li class="rock-dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
@@ -61,7 +76,7 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="rock-jumbotron">
         <h1>Rockskeleton</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <p>This is a template showcasing the optional theme stylesheet included in Rockskeleton. Use it as a starting point to create something more unique by building on or modifying it.</p>
       </div>
 
 
