@@ -1,0 +1,2560 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>irockskeleton - Rockskeleton 3.3.7</title>
+  <meta name="keywords" content="rockskeleton,irockskeleton,rockskeleton,layout">
+  <meta name="description" content="LayoutIt! draggable">
+
+  <!-- Le styles -->
+  <link href="lib/rockskeleton/dist/css/rockskeleton.css" rel="stylesheet">
+  <link href="css/layoutit-rockskeleton.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.htmlClean.js"></script>
+  <script src="lib/rockskeleton/dist/js/rockskeleton.min.js"></script>
+  <script src="js/scripts-irockskeleton.js"></script>
+
+</head>
+
+<body style="min-height: 824px;" class="edit">
+<div class="rock-navbar rock-navbar-inverse rock-navbar-fixed-top rock-navbar-layoutit">
+  <div class="rock-navbar-header">
+    <button data-target="navbar-collapse" data-toggle="collapse" class="rock-navbar-toggle" type="button">
+      <span class="glyphicon-bar"></span>
+      <span class="glyphicon-bar"></span>
+      <span class="glyphicon-bar"></span>
+    </button>
+    <a class="rock-navbar-brand" href="#">
+      <img src="img/favicon.png">
+      irockskeleton 3.3.7
+      <span class="rock-label rock-label-default">BETA</span>
+    </a>
+  </div>
+  <div class="rock-collapse rock-navbar-collapse">
+
+    <ul class="rock-nav rock-pull-right">
+      <li>
+
+        <div class="rock-button-group rock-button-donate rock-pull-right"></div>
+
+        <div class="rock-button-group">
+          <button role="button" data-toggle="modal" data-target="#feedbackModal" id="feedback" class="rock-button rock-button-xs rock-button-primary rock-active"><i class="glyphicon-comment glyphicon"></i>
+            Contact Author
+          </button>
+        </div>
+      </li>
+    </ul>
+    <ul class="rock-nav" id="menu-layoutit">
+      <li>
+        <div class="rock-button-group" data-toggle="buttons-radio">
+          <button type="button" id="edit" class="rock-button rock-button-xs rock-button-primary rock-active"><i
+                  class="glyphicon glyphicon-edit "></i>
+            edit
+          </button>
+          <button type="button" class="rock-button rock-button-xs rock-button-primary" id="devpreview">
+            <i class="glyphicon-eye-close glyphicon"></i>
+            develop
+          </button>
+          <button type="button" class="rock-button rock-button-xs rock-button-primary" id="sourcepreview">
+            <i class="glyphicon-eye-open glyphicon"></i>
+            preview
+          </button>
+        </div>
+        <div class="rock-button-group">
+          <button type="button" class="rock-button rock-button-xs rock-button-primary" id="button-download-modal" data-target="#downloadModal"
+                  role="button" data-toggle="modal"><i class="glyphicon-chevron-down glyphicon"></i>
+            download
+          </button>
+          <!--  <button class="rock-button rock-button-xs rock-button-primary" id="button-share-modal" href="/share/indexV3" role="button" data-toggle="modal" data-target="#shareModal"> <i class="glyphicon-share glyphicon"></i>
+          share
+      </button>
+      -->
+          <button class="rock-button rock-button-xs rock-button-primary" href="#clear" id="clear">
+            <i class="glyphicon-trash glyphicon"></i>
+            clear
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!--/.navbar-collapse -->
+</div>
+<!--/.navbar-fixed-top -->
+
+<div class="rock-container">
+  <div class="rock-row">
+    <div class="">
+      <div class="rock-sidebar-nav">
+
+        <ul class="rock-nav rock-nav-list rock-accordion-group">
+          <li class="rock-nav-header">
+            <div class="rock-pull-right rock-popover-info">
+              <i class="glyphicon glyphicon-question-sign"></i>
+
+              <div class="rock-popover rock-fade rock-right">
+                <div class="rock-arrow"></div>
+                <h3 class="rock-popover-title">help</h3>
+
+                <div class="rock-popover-content">
+                  Set your grid layout here, each grid has 12 rock-columns, divided by space. See:
+                  <a href="http://getrockskeleton.com/css/#grid">rockskeleton Grid System.</a>
+                </div>
+              </div>
+            </div>
+            <i class="glyphicon-plus glyphicon"></i>
+            Layout
+          </li>
+          <li class="rock-rows" id="estRows">
+
+            <div class="rock-lyrow ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon-remove glyphicon"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">
+                <input value="12" class="rock-form-control" type="text"></div>
+              <div class="rock-view">
+                <div class="rock-row rock-clearfix">
+                  <div class="rock-col-md-12 rock-column"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rock-lyrow ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon-remove glyphicon"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">
+                <input value="6 6" class="rock-form-control" type="text"></div>
+              <div class="rock-view">
+                <div class="rock-row rock-clearfix">
+                  <div class="rock-col-md-6 rock-column"></div>
+                  <div class="rock-col-md-6 rock-column"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rock-lyrow ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon-remove glyphicon"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">
+                <input value="8 4" class="rock-form-control" type="text"></div>
+              <div class="rock-view">
+                <div class="rock-row rock-clearfix">
+                  <div class="rock-col-md-8 rock-column"></div>
+                  <div class="rock-col-md-4 rock-column"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rock-lyrow ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon-remove glyphicon"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">
+                <input value="4 4 4" class="rock-form-control" type="text"></div>
+              <div class="rock-view">
+                <div class="rock-row rock-clearfix">
+                  <div class="rock-col-md-4 rock-column"></div>
+                  <div class="rock-col-md-4 rock-column"></div>
+                  <div class="rock-col-md-4 rock-column"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rock-lyrow ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon-remove glyphicon"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">
+                <input value="2 6 4" class="rock-form-control" type="text"></div>
+              <div class="rock-view">
+                <div class="rock-row rock-clearfix">
+                  <div class="rock-col-md-2 rock-column"></div>
+                  <div class="rock-col-md-6 rock-column"></div>
+                  <div class="rock-col-md-4 rock-column"></div>
+                </div>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+
+        <ul class="rock-nav rock-nav-list rock-accordion-group">
+          <li class="rock-nav-header">
+            <i class="glyphicon glyphicon-plus"></i>
+            CSS
+            <div class="rock-pull-right rock-popover-info">
+              <i class="glyphicon glyphicon-question-sign "></i>
+
+              <div class="rock-popover rock-fade rock-right">
+                <div class="rock-arrow"></div>
+                <h3 class="rock-popover-title">help</h3>
+
+                <div class="rock-popover-content">
+                  Drag your component to your grid rock-column and set the style. See:
+                  <a target="_blank" href="http://getrockskeleton.com/css/">CSS.</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="rock-boxes" id="elmBase">
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      alignment
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-left">left</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-center">center</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-right">right</a>
+                                      </li>
+                                    </ul>
+								</span>
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      context
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-muted">disabled</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-warning">warning</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-error">error</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-info">info</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-success">success</a>
+                                      </li>
+                                    </ul>
+								</span>
+							</span>
+
+              <div class="rock-preview">Headings</div>
+              <div class="rock-view">
+                <h3 contenteditable="true">h3. This is layoutit.</h3>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      alignment
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-left">left</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-center">center</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-right">right</a>
+                                      </li>
+                                    </ul>
+								</span>
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      context
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-muted">disabled</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-warning">warning</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-error">error</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-info">info</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-text-success">success</a>
+                                      </li>
+                                    </ul>
+								</span>
+
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-lead">Lead</a>
+							</span>
+
+              <div class="rock-preview">Paragraphs</div>
+              <div class="rock-view">
+                <p><em>Git</em>
+                  is a distribution version control system，Made by <strong>Linus Torvalds</strong>
+                  ，Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus。
+                </p>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">Addresses</div>
+              <div class="rock-view">
+                <address contenteditable="true"><strong>Twitter, Inc.</strong>
+                  <br>
+                  795 Folsom Ave, Suite 600
+                  <br>
+                  San Francisco, CA 94107
+                  <br> <abbr title="Phone">P:</abbr>
+                  (123) 456-7890
+                </address>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-pull-right">Pull right</a>
+							</span>
+
+              <div class="rock-preview">Blockquotes</div>
+              <div class="rock-view rock-clearfix">
+                <blockquote contenteditable="true">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  </p>
+                  <small>
+                    Someone famous
+                    <cite title="Source Title">Source Title</cite>
+                  </small>
+                </blockquote>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-list-unstyled">unstyled</a>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-list-inline">inline</a>
+							</span>
+
+              <div class="rock-preview">Unordered List</div>
+              <div class="rock-view">
+                <ul contenteditable="true">
+                  <li>Lorem ipsum dolor sit amet</li>
+                  <li>Consectetur adipiscing elit</li>
+                  <li>Integer molestie lorem at massa</li>
+                  <li>Facilisis in pretium nisl aliquet</li>
+                  <li>Nulla volutpat aliquam velit</li>
+                  <li>Faucibus porta lacus fringilla vel</li>
+                  <li>Aenean sit amet erat nunc</li>
+                  <li>Eget porttitor lorem</li>
+                </ul>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-list-unstyled">unstyled</a>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-list-inline">inline</a>
+							</span>
+
+              <div class="rock-preview">Ordered List</div>
+              <div class="rock-view">
+                <ol contenteditable="true">
+                  <li>Lorem ipsum dolor sit amet</li>
+                  <li>Consectetur adipiscing elit</li>
+                  <li>Integer molestie lorem at massa</li>
+                  <li>Facilisis in pretium nisl aliquet</li>
+                  <li>Nulla volutpat aliquam velit</li>
+                  <li>Faucibus porta lacus fringilla vel</li>
+                  <li>Aenean sit amet erat nunc</li>
+                  <li>Eget porttitor lorem</li>
+                </ol>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-dl-horizontal">horizontal alignment</a>
+							</span>
+
+              <div class="rock-preview">Description</div>
+              <div class="rock-view">
+                <dl contenteditable="true">
+                  <dt>Description lists</dt>
+                  <dd>Proin vitae justo vel orci porta ullamcorper in efficitur urna.</dd>
+                  <dt>Euismod</dt>
+                  <dd>
+                    Sed lobortis, velit vitae sodales accumsan, mauris ante aliquam purus.
+                  </dd>
+                  <dd>Fusce sagittis metus eu rhoncus pellentesque.</dd>
+                  <dt>Malesuada porta</dt>
+                  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                  <dt>Felis euismod semper eget lacinia</dt>
+                  <dd>
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                    sit amet risus.
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      style
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-table-striped">striped</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-table-bordered">bordered</a>
+                                      </li>
+                                    </ul>
+								</span>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-table-hover">hover</a>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-table-condensed">condensed</a>
+							</span>
+
+              <div class="rock-preview">Tables</div>
+              <div class="rock-view">
+                <table class="rock-table" contenteditable="true">
+                  <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Product</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>TB - Monthly</td>
+                    <td>01/04/2012</td>
+                    <td>Default</td>
+                  </tr>
+                  <tr class="rock-success">
+                    <td>1</td>
+                    <td>TB - Monthly</td>
+                    <td>01/04/2012</td>
+                    <td>Approved</td>
+                  </tr>
+                  <tr class="rock-error">
+                    <td>2</td>
+                    <td>TB - Monthly</td>
+                    <td>02/04/2012</td>
+                    <td>Declined</td>
+                  </tr>
+                  <tr class="rock-warning">
+                    <td>3</td>
+                    <td>TB - Monthly</td>
+                    <td>03/04/2012</td>
+                    <td>Pending</td>
+                  </tr>
+                  <tr class="rock-info">
+                    <td>4</td>
+                    <td>TB - Monthly</td>
+                    <td>04/04/2012</td>
+                    <td>Call in to confirm</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-form-inline">inline</a>
+							</span>
+
+              <div class="rock-preview">Forms</div>
+              <div class="rock-view">
+                <form role="form">
+                  <div class="rock-form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input class="rock-form-control" id="exampleInputEmail1" placeholder="Enter email" type="email"></div>
+                  <div class="rock-form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input class="rock-form-control" id="exampleInputPassword1" placeholder="Password" type="password"></div>
+                  <div class="rock-form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input id="exampleInputFile" type="file">
+
+                    <p class="rock-help-block">Example block-level help text here.</p>
+                  </div>
+                  <div class="rock-checkbox">
+                    <label>
+                      <input type="checkbox">Check me out</label>
+                  </div>
+                  <button type="submit" class="rock-button rock-button-default">Submit</button>
+                </form>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+              <span class="rock-configuration"></span>
+
+              <div class="rock-preview">Horizental Forms</div>
+              <div class="rock-view">
+                <form class="rock-form-horizontal" role="form">
+                  <div class="rock-form-group">
+                    <label for="inputEmail3" class="rock-col-sm-2 control-label">Email</label>
+
+                    <div class="rock-col-sm-10">
+                      <input class="rock-form-control" id="inputEmail3" placeholder="Email" type="email"></div>
+                  </div>
+                  <div class="rock-form-group">
+                    <label for="inputPassword3" class="rock-col-sm-2 control-label">Password</label>
+
+                    <div class="rock-col-sm-10">
+                      <input class="rock-form-control" id="inputPassword3" placeholder="Password" type="password"></div>
+                  </div>
+                  <div class="rock-form-group">
+                    <div class="rock-col-sm-offset-2 col-sm-10">
+                      <div class="rock-checkbox">
+                        <label>
+                          <input type="checkbox">Remember me</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rock-form-group">
+                    <div class="rock-col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="rock-button rock-button-default">Sign in</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      style
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-primary">primary</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-info">info</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-success">success</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-warning">warning</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-danger">danger</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-inverse">inverse</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-link">link</a>
+                                      </li>
+                                    </ul>
+								</span>
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      size
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="">
+                                        <a href="#" rel="rock-button-lg">lg</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-default">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-sm">sm</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-xs">xs</a>
+                                      </li>
+                                    </ul>
+								</span>
+
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-button-block">block</a>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-active">active</a>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-disabled">disabled</a>
+							</span>
+
+              <div class="rock-preview">Buttons</div>
+              <div class="rock-view">
+                <button type="button" class="rock-button rock-button-default" contenteditable="true">button</button>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      style
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-img-rounded">rounded</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-img-circle">circle</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-img-thumbnail">thumbnail</a>
+                                      </li>
+                                    </ul>
+								</span>
+							</span>
+
+              <div class="rock-preview">Images</div>
+              <div class="rock-view">
+                <img alt="140x140"
+                     src="img/default_004.jpg">
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="rock-nav rock-nav-list rock-accordion-group">
+          <li class="rock-nav-header">
+            <i class="glyphicon glyphicon-plus"></i>
+            Components
+            <div class="rock-pull-right rock-popover-info">
+              <i class="glyphicon glyphicon-question-sign "></i>
+
+              <div class="rock-popover rock-fade rock-right">
+                <div class="rock-arrow"></div>
+                <h3 class="rock-popover-title">help</h3>
+
+                <div class="rock-popover-content">
+                  Drag the component to the grid rock-columns and set the style.See:
+                  <!--将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该组件的样式。如果你需要了解更多内容，请访问-->
+                  <a target="_blank" href="http://getrockskeleton.com/components/">components.</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="rock-boxes" id="elmComponents">
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      size
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-group-lg">lg</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-group-md">md</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-group-sm">sm</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-button-group-xs">xs</a>
+                                      </li>
+                                    </ul>
+								</span>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-button-group-vertical">vertical</a>
+							</span>
+
+              <div class="rock-preview">Button Group</div>
+              <div class="rock-view">
+                <div class="rock-button-group">
+                  <button class="rock-button rock-button-default" type="button">
+                    <i class="glyphicon glyphicon-align-left"></i>
+                    left
+                  </button>
+                  <button class="rock-button rock-button-default" type="button">
+                    <i class="glyphicon glyphicon-align-center"></i>
+                    center
+                  </button>
+                  <button class="rock-button rock-button-default" type="button">
+                    <i class="glyphicon glyphicon-align-right"></i>
+                    right
+                  </button>
+                  <button class="rock-button rock-button-default" type="button">
+                    <i class="glyphicon glyphicon-align-justify"></i>
+                    justify
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-dropup">dropup</a>
+							</span>
+
+              <div class="rock-preview">Dropdown</div>
+              <div class="rock-view">
+                <div class="rock-button-group">
+                  <button class="rock-button rock-button-default" contenteditable="true">Action</button>
+                  <button data-toggle="dropdown" class="rock-button rock-button-default rock-dropdown-toggle">
+                    <span class="rock-caret"></span>
+                  </button>
+                  <ul class="rock-dropdown-menu" contenteditable="true">
+                    <li>
+                      <a href="#">Option 1</a>
+                    </li>
+                    <li class="rock-disabled">
+                      <a href="#">Option 2</a>
+                    </li>
+                    <li class="rock-divider"><br></li>
+                    <li>
+                      <a href="#">Others</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      style
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="">
+                                        <a href="#" rel="rock-nav-tabs">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-nav-pills">pills</a>
+                                      </li>
+                                    </ul>
+								</span>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-nav-stacked">stacked</a>
+							</span>
+
+              <div class="rock-preview">Navbar</div>
+              <div class="rock-view">
+                <ul class="rock-nav rock-nav-tabs" contenteditable="true">
+                  <li class="rock-active">
+                    <a href="#">Home</a>
+                  </li>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li class="rock-disabled">
+                    <a href="#">Contact</a>
+                  </li>
+                  <li class="rock-dropdown rock-pull-right">
+                    <a href="#" data-toggle="dropdown" class="rock-dropdown-toggle">
+                      Dropdown <b class="rock-caret"></b>
+                    </a>
+                    <ul class="rock-dropdown-menu">
+                      <li>
+                        <a href="#">Option</a>
+                      </li>
+                      <li>
+                        <a href="#">Settings</a>
+                      </li>
+                      <li>
+                        <a href="#">Others</a>
+                      </li>
+                      <li class="rock-divider"><br></li>
+                      <li>
+                        <a href="#">Dividers</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">Breadcrumbs</div>
+              <div class="rock-view">
+
+                <ul class="rock-breadcrumb">
+                  <li>
+                    <a href="#" contenteditable="true">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" contenteditable="true">Library</a>
+                  </li>
+                  <li class="rock-active" contenteditable="true">Data</li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      size
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="">
+                                        <a href="#" rel="rock-pagination-lg">lg</a>
+                                      </li>
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">md</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-pagination-sm">sm</a>
+                                      </li>
+                                    </ul>
+								</span>
+
+							</span>
+
+              <div class="rock-preview">Pagination</div>
+              <div class="rock-view">
+                <ul class="rock-pagination" contenteditable="true">
+                  <li>
+                    <a href="#">Prev</a>
+                  </li>
+                  <li>
+                    <a href="#">1</a>
+                  </li>
+                  <li>
+                    <a href="#">2</a>
+                  </li>
+                  <li>
+                    <a href="#">3</a>
+                  </li>
+                  <li>
+                    <a href="#">4</a>
+                  </li>
+                  <li>
+                    <a href="#">5</a>
+                  </li>
+                  <li>
+                    <a href="#">Next</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      style
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="">
+                                        <a href="#" rel="rock-label-default">Default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-label-primary">Primary</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-label-success">Success</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-label-info">Info</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-label-warning">Warning</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-label-danger">Danger</a>
+                                      </li>
+                                    </ul>
+								</span>
+							</span>
+
+              <div class="rock-preview">label</div>
+              <div class="rock-view">
+                <span class="rock-label rock-label-default" contenteditable="true">label</span>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+              <span class="rock-configuration"></span>
+
+              <div class="rock-preview">badge</div>
+              <div class="rock-view">
+                <ul class="rock-nav rock-nav-pills" contenteditable="true">
+                  <li class="rock-active">
+                    <a href="#">
+                      <span class="rock-badge rock-pull-right">42</span>
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="rock-badge rock-pull-right">16</span>
+                      More
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-well">Well</a>
+							</span>
+
+              <div class="rock-preview">Jumbotron</div>
+              <div class="rock-view">
+                <div class="rock-jumbotron" contenteditable="true">
+                  <h1>Here Rockskeleton!</h1>
+
+                  <p>
+                    Essentially, what Rockskeleton does is reduce the time needed to get a modern website up and running.
+					Rockskeleton. is one of the most popular web development frameworks out there, and it is used 
+					for developing highly-responsive projects in HTML, CSS, and JavaScript.
+                  </p>
+
+                  <p>
+                    <a class="rock-button rock-button-primary rock-button-large" href="#">Learn more</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">Page header</div>
+              <div class="rock-view">
+                <div class="rock-page-header">
+                  <h1 contenteditable="true">
+                    Example page header
+                    <small>Subtext for header</small>
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">Text</div>
+              <div class="rock-view">
+                <h2 contenteditable="true">Heading</h2>
+
+                <p contenteditable="true">
+                  Fusce sagittis metus eu rhoncus pellentesque. Fusce
+                  dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                  fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+                  mollis euismod. Donec sed odio dui.
+                </p>
+
+                <p>
+                  <a class="rock-button" href="#" contenteditable="true">View details »</a>
+                </p>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">Thumbnails</div>
+              <div class="rock-view">
+                <div class="rock-row">
+                  <div class="rock-col-md-4">
+                    <div class="rock-thumbnail">
+                      <img alt="300x200"
+                           src="img/default_006.jpg">
+
+                      <div class="rock-caption" contenteditable="true">
+                        <h3>Thumbnail rock-label</h3>
+
+                        <p>
+                          Cras justo odio, dapibus ac facilisis in, egestas eget
+                          quam. Fusce sagittis metus eu rhoncus pellentesque. Nullam id dolor
+                          id nibh ultricies vehicula ut id elit.
+                        </p>
+
+                        <p>
+                          <a class="rock-button rock-button-primary" href="#">Action</a>
+                          <a class="rock-button" href="#">Action</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rock-col-md-4">
+                    <div class="rock-thumbnail">
+                      <img alt="300x200"
+                           src="img/default.jpg">
+
+                      <div class="rock-caption" contenteditable="true">
+                        <h3>Thumbnail rock-label</h3>
+
+                        <p>
+                          Cras justo odio, dapibus ac facilisis in, egestas eget
+                          quam. Fusce sagittis metus eu rhoncus pellentesque. Nullam id dolor
+                          id nibh ultricies vehicula ut id elit.
+                        </p>
+
+                        <p>
+                          <a class="rock-button rock-button-primary" href="#">Action</a>
+                          <a class="rock-button" href="#">Action</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rock-col-md-4">
+                    <div class="rock-thumbnail">
+                      <img alt="300x200"
+                           src="img/default_007.jpg">
+
+                      <div class="rock-caption" contenteditable="true">
+                        <h3>Thumbnail rock-label</h3>
+
+                        <p>
+                          Cras justo odio, dapibus ac facilisis in, egestas eget
+                          quam. Fusce sagittis metus eu rhoncus pellentesque. Nullam id dolor
+                          id nibh ultricies vehicula ut id elit.
+                        </p>
+
+                        <p>
+                          <a class="rock-button rock-button-primary" href="#">Action</a>
+                          <a class="rock-button" href="#">Action</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+							<span class="rock-configuration">
+
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-progress-striped">striped</a>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-active">animation</a>
+							</span>
+
+              <div class="rock-preview">Progress</div>
+              <div class="rock-view">
+                <div class="rock-progress">
+                  <div class="rock-progress-bar progress-success" style="width: 60%;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-well">嵌入</a>
+							</span>
+
+              <div class="rock-preview">Media Object</div>
+              <div class="rock-view">
+                <div class="rock-media">
+                  <a href="#" class="rock-pull-left">
+                    <img src="img/default_002.jpg"
+                         class="rock-media-object"></a>
+
+                  <div class="rock-media-body" contenteditable="true">
+                    <h4 class="rock-media-heading">Nested media heading</h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in
+                    vulputate at, tempus viverra turpis.
+                    <div class="rock-media">
+                      <a href="#" class="rock-pull-left">
+                        <img src="img/default_002.jpg"
+                             class="rock-media-object"></a>
+
+                      <div class="rock-media-body" contenteditable="true">
+                        <h4 class="rock-media-heading">Nested media heading</h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                        scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in
+                        vulputate at, tempus viverra turpis.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+              <span class="rock-configuration"></span>
+
+              <div class="rock-preview">List Group</div>
+              <div class="rock-view">
+                <div class="rock-list-group" contenteditable="true">
+                  <a href="#" class="rock-list-group-item rock-active">Home</a>
+
+                  <div class="rock-list-group-item">List header</div>
+                  <div class="rock-list-group-item">
+                    <h4 class="rock-list-group-item-heading">List group item heading</h4>
+
+                    <p class="rock-list-group-item-text">...</p>
+                  </div>
+                  <div class="rock-list-group-item">
+                    <span class="rock-badge">14</span>
+                    Help
+                  </div>
+                  <a class="rock-list-group-item rock-active">
+                    <span class="rock-badge">14</span>
+                    Help
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      style
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="">
+                                        <a href="#" rel="rock-panel-default">Default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-panel-primary">Primary</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-panel-success">Success</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-panel-info">Info</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-panel-warning">Warning</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-panel-danger">Danger</a>
+                                      </li>
+                                    </ul>
+								</span>
+
+							</span>
+
+              <div class="rock-preview">Panels</div>
+              <div class="rock-view">
+                <div class="rock-panel panel-default">
+                  <div class="rock-panel-heading">
+                    <h3 class="rock-panel-title" contenteditable="true">Panel title</h3>
+                  </div>
+                  <div class="rock-panel-body" contenteditable="true">Panel content</div>
+                  <div class="rock-panel-footer" contenteditable="true">Panel footer</div>
+                </div>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+
+        <ul class="rock-nav rock-nav-list rock-accordion-group">
+          <li class="rock-nav-header">
+            <i class="glyphicon glyphicon-plus"></i>
+            JavaScript
+            <div class="rock-pull-right rock-popover-info">
+              <i class="glyphicon glyphicon-question-sign "></i>
+
+              <div class="rock-popover rock-fade rock-right">
+                <div class="rock-arrow"></div>
+                <h3 class="rock-popover-title">help</h3>
+
+                <div class="rock-popover-content">
+                  Drag the components into the grid rock-columns and set the style.See:
+                  <!--将组件元素拖放入你需要放入的栅格列中。之后，你可以设置该javascript组件的样式。如果你需要了解更多内容，请访问-->
+                  <a target="_blank" href="http://getrockskeleton.com/javascript/">JavaScript.</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="rock-boxes mute" id="elmJS">
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+
+              <div class="rock-preview">Modal</div>
+              <div class="rock-view">
+                <!-- Button to trigger modal -->
+                <a id="myModalLink" href="#myModalContainer" role="button" class="rock-button" data-toggle="modal">Open a modal</a>
+
+                <!-- Modal -->
+                <div class="rock-modal fade" id="myModalContainer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                     aria-hidden="true">
+                  <div class="rock-modal-dialog">
+                    <div class="rock-modal-content">
+                      <div class="rock-modal-header">
+                        <button type="button" class="rock-close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="rock-modal-title" id="myModalLabel" contenteditable="true">title</h4>
+                      </div>
+                      <div class="rock-modal-body" contenteditable="true">content...</div>
+                      <div class="rock-modal-footer">
+                        <button type="button" class="rock-button rock-button-default" data-dismiss="modal" contenteditable="true">close
+                        </button>
+                        <button type="button" class="rock-button rock-button-primary" contenteditable="true">save</button>
+                      </div>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      position
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-navbar-static-top">Top</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-navbar-fixed-top">Fixed top</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-navbar-fixed-bottom">Fixed bottom</a>
+                                      </li>
+                                    </ul>
+								</span>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-navbar-inverse">inverse</a>
+                              <!--a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-navbar-static-top">Static top</a>
+                          <a class="rock-button button-mini" href="#" rel="rock-navbar-fixed-top">Navbar fixed top</a>
+                          <a class="rock-button button-mini" href="#" rel="rock-navbar-fixed-bottom">Navbar fixed bottom</a-->
+						</span>
+
+              <div class="rock-preview">Navbar</div>
+              <div class="rock-view">
+
+                <nav class="rock-navbar rock-navbar-default" role="navigation">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="rock-navbar-header">
+                    <button type="button" class="rock-navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                      <span class="rock-sr-only">Toggle navigation</span>
+                      <span class="rock-icon-bar"></span>
+                      <span class="rock-icon-bar"></span>
+                      <span class="rock-icon-bar"></span>
+                    </button>
+                    <a class="rock-navbar-brand" href="#">Brand</a>
+                  </div>
+
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="rock-collapse rock-navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="rock-nav rock-navbar-nav">
+                      <li class="rock-active">
+                        <a href="#">Link</a>
+                      </li>
+                      <li>
+                        <a href="#">Link</a>
+                      </li>
+                      <li class="rock-dropdown">
+                        <a href="#" class="rock-dropdown-toggle" data-toggle="dropdown">
+                          Dropdown <b class="rock-caret"></b>
+                        </a>
+                        <ul class="rock-dropdown-menu">
+                          <li>
+                            <a href="#">Action</a>
+                          </li>
+                          <li>
+                            <a href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a href="#">Something else here</a>
+                          </li>
+                          <li class="rock-divider"></li>
+                          <li>
+                            <a href="#">Separated link</a>
+                          </li>
+                          <li class="rock-divider"></li>
+                          <li>
+                            <a href="#">One more separated link</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="rock-navbar-form rock-navbar-left" role="search">
+                      <div class="rock-form-group">
+                        <input class="rock-form-control" placeholder="Search" type="text"></div>
+                      <button type="submit" class="rock-button rock-button-default">Submit</button>
+                    </form>
+                    <ul class="rock-nav rock-navbar-nav rock-navbar-right">
+                      <li>
+                        <a href="#">Link</a>
+                      </li>
+                      <li class="rock-dropdown">
+                        <a href="#" class="rock-dropdown-toggle" data-toggle="dropdown">
+                          Dropdown
+                          <b class="rock-caret"></b>
+                        </a>
+                        <ul class="rock-dropdown-menu">
+                          <li>
+                            <a href="#">Action</a>
+                          </li>
+                          <li>
+                            <a href="#">Another action</a>
+                          </li>
+                          <li>
+                            <a href="#">Something else here</a>
+                          </li>
+                          <li class="rock-divider"></li>
+                          <li>
+                            <a href="#">Separated link</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /.navbar-collapse -->
+                </nav>
+
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+						<span class="rock-drag rock-label rock-label-default">
+							<i class="glyphicon glyphicon-move"></i>
+							drag
+						</span>
+              <span class="rock-configuration"></span>
+
+              <div class="rock-preview">Tab</div>
+              <div class="rock-view">
+                <div class="rock-tabbable" id="myTabs">
+                  <!-- Only required for left/right tabs -->
+                  <ul class="rock-nav rock-nav-tabs">
+                    <li class="rock-active">
+                      <a href="#tab1" data-toggle="tab" contenteditable="true">Section 1</a>
+                    </li>
+                    <li>
+                      <a href="#tab2" data-toggle="tab" contenteditable="true">Section 2</a>
+                    </li>
+                  </ul>
+                  <div class="rock-tab-content">
+                    <div class="rock-tab-pane rock-active" id="tab1">
+                      <p contenteditable="true">I'm in Section 1.</p>
+                    </div>
+                    <div class="rock-tab-pane" id="tab2">
+                      <p contenteditable="true">Howdy, I'm in Section 2.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+						<span class="rock-drag rock-label rock-label-default">
+							<i class="glyphicon glyphicon-move"></i>
+							drag
+						</span>
+						<span class="rock-configuration">
+							<span class="rock-button-group rock-button-group-xs">
+								<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                  style
+                                  <span class="rock-caret"></span>
+                                </a>
+								<ul class="rock-dropdown-menu">
+                                  <li class="">
+                                    <a href="#" rel="rock-alert-success">Success</a>
+                                  </li>
+                                  <li class="">
+                                    <a href="#" rel="rock-alert-info">Info</a>
+                                  </li>
+                                  <li class="">
+                                    <a href="#" rel="rock-alert-warning">Warning</a>
+                                  </li>
+                                  <li class="">
+                                    <a href="#" rel="rock-alert-danger">Danger</a>
+                                  </li>
+                                </ul>
+							</span>
+
+						</span>
+
+              <div class="rock-preview">Alert</div>
+              <div class="rock-view">
+                <div class="rock-alert alert-success alert-dismissable" contenteditable="true">
+                  <button type="button" class="rock-close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h4>Alert!</h4>
+                  <strong>Warning!</strong>
+                  Best check yo self, you're not looking too good.
+                  <a href="#" class="rock-alert-link">alert link</a>
+                </div>
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+						<span class="rock-drag rock-label rock-label-default">
+							<i class="glyphicon glyphicon-move"></i>
+							drag
+						</span>
+
+              <div class="rock-preview">Accordion</div>
+              <div class="rock-view">
+                <div class="rock-panel-group" id="myAccordion">
+                  <div class="rock-panel panel-default">
+                    <div class="rock-panel-heading">
+                      <a class="rock-panel-title" data-toggle="collapse" data-parent="#myAccordion" href="#collapseOne"
+                         contenteditable="true">Collapsible Group Item #1</a>
+                    </div>
+                    <div id="collapseOne" class="rock-panel-collapse rock-collapse rock-in">
+                      <div class="rock-panel-body" contenteditable="true">Anim pariatur cliche...</div>
+                    </div>
+                  </div>
+                  <div class="rock-panel panel-default">
+                    <div class="rock-panel-heading">
+                      <a class="rock-panel-title" data-toggle="collapse" data-parent="#myAccordion" href="#collapseTwo"
+                         contenteditable="true">Collapsible Group Item #2</a>
+                    </div>
+                    <div id="collapseTwo" class="rock-panel-collapse rock-collapse">
+                      <div class="rock-panel-body" contenteditable="true">Anim pariatur cliche...</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="rock-box rock-box-element ui-draggable">
+              <a href="#close" class="rock-remove rock-label rock-label-danger">
+                <i class="glyphicon glyphicon-remove"></i>
+                delete
+              </a>
+						<span class="rock-drag rock-label rock-label-default">
+							<i class="glyphicon glyphicon-move"></i>
+							drag
+						</span>
+
+              <div class="rock-preview">Carousel</div>
+              <div class="rock-view">
+
+                <div class="rock-carousel slide" id="myCarousel">
+                  <ol class="rock-carousel-indicators">
+                    <li class="rock-active" data-slide-to="0" data-target="#myCarousel"></li>
+                    <li data-slide-to="1" data-target="#myCarousel" class=""></li>
+                    <li data-slide-to="2" data-target="#myCarousel" class=""></li>
+                  </ol>
+                  <div class="rock-carousel-inner">
+                    <div class="rock-item rock-active">
+                      <img alt=""
+                           src="img/default_008.jpg">
+
+                      <div class="rock-carousel-caption">
+                        <h4>First Thumbnail rock-label</h4>
+
+                        <p>
+                          Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                          Fusce sagittis metus eu rhoncus pellentesque. Nullam id dolor id
+                          nibh ultricies vehicula ut id elit.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="rock-item">
+                      <img alt=""
+                           src="img/default_003.jpg">
+
+                      <div class="rock-carousel-caption">
+                        <h4>Second Thumbnail rock-label</h4>
+
+                        <p>
+                          Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                          Fusce sagittis metus eu rhoncus pellentesque. Nullam id dolor id
+                          nibh ultricies vehicula ut id elit.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="rock-item">
+                      <img alt=""
+                           src="img/default_005.jpg">
+
+                      <div class="rock-carousel-caption">
+                        <h4>Third Thumbnail rock-label</h4>
+
+                        <p>
+                          Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                          Fusce sagittis metus eu rhoncus pellentesque. Nullam id dolor id
+                          nibh ultricies vehicula ut id elit.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a class="rock-left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="rock-right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="rock-nav rock-nav-list rock-accordion-group">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ads for layoutit on github -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1397605420166964"
+     data-ad-slot="9226067930"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</ul>
+      </div>
+    </div>
+    <!--/span-->
+    <div style="min-height: 754px;" class="rock-demo ui-sortable">
+      <div class="rock-lyrow">
+        <a href="#close" class="rock-remove rock-label rock-label-danger">
+          <i class="glyphicon glyphicon-remove"></i>
+          delete
+        </a>
+			<span class="rock-drag rock-label rock-label-default">
+				<i class="glyphicon glyphicon-move"></i>
+				drag
+			</span>
+
+        <div class="rock-preview">9 3</div>
+        <div class="rock-view">
+          <div class="rock-row rock-clearfix">
+            <div class="rock-col-md-12 rock-column ui-sortable">
+              <div class="rock-box rock-box-element">
+                <a href="#close" class="rock-remove rock-label rock-label-danger">
+                  <i class="glyphicon glyphicon-remove"></i>
+                  delete
+                </a>
+							<span class="rock-drag rock-label rock-label-default">
+								<i class="glyphicon glyphicon-move"></i>
+								drag
+							</span>
+							<span class="rock-configuration">
+								<span class="rock-button-group rock-button-group-xs">
+									<a class="rock-button rock-button-default rock-dropdown-toggle" data-toggle="dropdown" href="#">
+                                      position
+                                      <span class="rock-caret"></span>
+                                    </a>
+									<ul class="rock-dropdown-menu">
+                                      <li class="rock-active">
+                                        <a href="#"  rel="">default</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-navbar-static-top">top</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-navbar-fixed-top">fixed top</a>
+                                      </li>
+                                      <li class="">
+                                        <a href="#" rel="rock-navbar-fixed-bottom">fixed bottom</a>
+                                      </li>
+                                    </ul>
+								</span>
+								<a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-navbar-inverse">inverse</a>
+                              <!--a class="rock-button rock-button-xs rock-button-default" href="#" rel="rock-navbar-static-top">Static top</a>
+                          <a class="rock-button button-mini" href="#" rel="rock-navbar-fixed-top">Navbar fixed top</a>
+                          <a class="rock-button button-mini" href="#" rel="rock-navbar-fixed-bottom">Navbar fixed bottom</a-->
+						</span>
+
+                <div class="rock-preview">Navbar</div>
+                <div class="rock-view">
+
+                  <nav class="rock-navbar rock-navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="rock-navbar-header">
+                      <button type="button" class="rock-navbar-toggle" data-toggle="collapse"
+                              data-target="#bs-example-navbar-collapse-1">
+                        <span class="rock-sr-only">Toggle navigation</span>
+                        <span class="rock-icon-bar"></span>
+                        <span class="rock-icon-bar"></span>
+                        <span class="rock-icon-bar"></span>
+                      </button>
+                      <a class="rock-navbar-brand" href="#">Brand</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="rock-collapse rock-navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="rock-nav rock-navbar-nav">
+                        <li class="rock-active">
+                          <a href="#">Link</a>
+                        </li>
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li class="rock-dropdown">
+                          <a href="#" class="rock-dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <b class="rock-caret"></b>
+                          </a>
+                          <ul class="rock-dropdown-menu">
+                            <li>
+                              <a href="#">Action</a>
+                            </li>
+                            <li>
+                              <a href="#">Another action</a>
+                            </li>
+                            <li>
+                              <a href="#">Something else here</a>
+                            </li>
+                            <li class="rock-divider"></li>
+                            <li>
+                              <a href="#">Separated link</a>
+                            </li>
+                            <li class="rock-divider"></li>
+                            <li>
+                              <a href="#">One more separated link</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <form class="rock-navbar-form rock-navbar-left" role="search">
+                        <div class="rock-form-group">
+                          <input class="rock-form-control" placeholder="Search" type="text"></div>
+                        <button type="submit" class="rock-button rock-button-default">Submit</button>
+                      </form>
+                      <ul class="rock-nav rock-navbar-nav rock-navbar-right">
+                        <li>
+                          <a href="#">Link</a>
+                        </li>
+                        <li class="rock-dropdown">
+                          <a href="#" class="rock-dropdown-toggle" data-toggle="dropdown">
+                            Dropdown
+                            <b class="rock-caret"></b>
+                          </a>
+                          <ul class="rock-dropdown-menu">
+                            <li>
+                              <a href="#">Action</a>
+                            </li>
+                            <li>
+                              <a href="#">Another action</a>
+                            </li>
+                            <li>
+                              <a href="#">Something else here</a>
+                            </li>
+                            <li class="rock-divider"></li>
+                            <li>
+                              <a href="#">Separated link</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                  </nav>
+
+                </div>
+              </div>
+              <div class="rock-box rock-box-element">
+                <a href="#close" class="rock-remove rock-label rock-label-danger">
+                  <i class="glyphicon glyphicon-remove"></i>
+                  delete
+                </a>
+						<span class="rock-drag rock-label rock-label-default">
+							<i class="glyphicon glyphicon-move"></i>
+							drag
+						</span>
+						<span class="rock-configuration">
+							<a class="rock-button rock-button-xs rock-button-default rock-active" href="#" rel="rock-well">well</a>
+						</span>
+
+                <div class="rock-preview">Jumbotron</div>
+                <div class="rock-view">
+                  <div class="rock-jumbotron well" contenteditable="true">
+                    <h1>Here Rockskeleton!</h1>
+
+                    <p>
+                      Essentially, what Rockskeleton does is reduce the time needed to get a modern website up and running.
+					Rockskeleton. is one of the most popular web development frameworks out there, and it is used 
+					for developing highly-responsive projects in HTML, CSS, and JavaScript.
+                    </p>
+
+                    <p>
+                      <a class="rock-button rock-button-primary rock-button-large" href="#">Learn more</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rock-lyrow" style="display: block;">
+        <a href="#close" class="rock-remove rock-label rock-label-danger">
+          <i class="glyphicon glyphicon-remove"></i>
+          delete
+        </a>
+		<span class="rock-drag rock-label rock-label-default">
+			<i class="glyphicon glyphicon-move"></i>
+			drag
+		</span>
+
+        <div class="rock-preview">4 4 4</div>
+        <div class="rock-view">
+          <div class="rock-row rock-clearfix">
+            <div class="rock-col-md-4 rock-column ui-sortable" style="">
+              <div class="rock-box rock-box-element">
+                <a href="#close" class="rock-remove rock-label rock-label-danger">
+                  <i class="glyphicon glyphicon-remove"></i>
+                  delete
+                </a>
+						<span class="rock-drag rock-label rock-label-default">
+							<i class="glyphicon glyphicon-move"></i>
+							drag
+						</span>
+
+                <div class="rock-preview">Text</div>
+                <div class="rock-view">
+                  <h2 contenteditable="true">Heading</h2>
+
+                  <p contenteditable="true">
+                    Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus,
+                    tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+                    massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod. Donec sed odio dui.
+                  </p>
+
+                  <p>
+                    <a class="rock-button" href="#" contenteditable="true">View details »</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="rock-col-md-4 rock-column ui-sortable" style="">
+              <div class="rock-box rock-box-element">
+                <a href="#close" class="rock-remove rock-label rock-label-danger">
+                  <i class="glyphicon glyphicon-remove"></i>
+                  delete
+                </a>
+						<span class="rock-drag rock-label rock-label-default">
+							<i class="glyphicon glyphicon-move"></i>
+							drag
+						</span>
+
+                <div class="rock-preview">Text</div>
+                <div class="rock-view">
+                  <h2 contenteditable="true">Heading</h2>
+
+                  <p contenteditable="true">
+                    Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus,
+                    tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+                    massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod. Donec sed odio dui.
+                  </p>
+
+                  <p>
+                    <a class="rock-button" href="#" contenteditable="true">View details »</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="rock-col-md-4 rock-column ui-sortable" style="">
+              <div class="rock-box rock-box-element">
+                <a href="#close" class="rock-remove rock-label rock-label-danger">
+                  <i class="glyphicon glyphicon-remove"></i>
+                  drag
+                </a>
+						<span class="rock-drag rock-label rock-label-default">
+							<i class="glyphicon glyphicon-move"></i>
+							drag
+						</span>
+
+                <div class="rock-preview">Text</div>
+                <div class="rock-view">
+                  <h2 contenteditable="true">Heading</h2>
+
+                  <p contenteditable="true">
+                    Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus,
+                    tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+                    massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+                    euismod. Donec sed odio dui.
+                  </p>
+
+                  <p>
+                    <a class="rock-button" href="#" contenteditable="true">View details »</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/span-->
+    <div id="download-layout">
+      <div class="rock-container">
+        <div class="rock-row rock-rock-clearfix">
+          <div class="rock-col-md-12 rock-column">
+            <nav class="rock-navbar rock-navbar-default" role="navigation">
+              <div class="rock-navbar-header">
+                <button type="button" class="rock-navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1"><span class="rock-sr-only">Toggle navigation</span><span
+                        class="rock-icon-bar"></span><span class="rock-icon-bar"></span><span class="rock-icon-bar"></span></button>
+                <a class="rock-navbar-brand" href="#">Brand</a>
+              </div>
+
+              <div class="rock-collapse rock-navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="rock-nav rock-navbar-nav">
+                  <li class="rock-active">
+                    <a href="#">Link</a>
+                  </li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li class="rock-dropdown">
+                    <a href="#" class="rock-dropdown-toggle" data-toggle="dropdown">Dropdown<strong
+                            class="rock-caret"></strong></a>
+                    <ul class="rock-dropdown-menu">
+                      <li>
+                        <a href="#">Action</a>
+                      </li>
+                      <li>
+                        <a href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a href="#">Something else here</a>
+                      </li>
+                      <li class="rock-divider">
+                      </li>
+                      <li>
+                        <a href="#">Separated link</a>
+                      </li>
+                      <li class="rock-divider">
+                      </li>
+                      <li>
+                        <a href="#">One more separated link</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="rock-navbar-form rock-navbar-left" role="search">
+                  <div class="rock-form-group">
+                    <input class="rock-form-control" type="text">
+                  </div>
+                  <button type="submit" class="rock-button rock-button-default">Submit</button>
+                </form>
+                <ul class="rock-nav rock-navbar-nav rock-navbar-right">
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li class="rock-dropdown">
+                    <a href="#" class="rock-dropdown-toggle" data-toggle="dropdown">Dropdown<strong
+                            class="rock-caret"></strong></a>
+                    <ul class="rock-dropdown-menu">
+                      <li>
+                        <a href="#">Action</a>
+                      </li>
+                      <li>
+                        <a href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a href="#">Something else here</a>
+                      </li>
+                      <li class="rock-divider">
+                      </li>
+                      <li>
+                        <a href="#">Separated link</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </nav>
+            <div class="rock-jumbotron">
+              <h1>
+                Here Rockskeleton!
+              </h1>
+
+              <p>
+                Essentially, what Rockskeleton does is reduce the time needed to get a modern website up and running.
+					Rockskeleton. is one of the most popular web development frameworks out there, and it is used 
+					for developing highly-responsive projects in HTML, CSS, and JavaScript.
+              </p>
+
+              <p>
+                <a class="rock-button rock-button-primary rock-button-large" href="#">Learn more</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="rock-row rock-clearfix">
+          <div class="rock-col-md-4 rock-column">
+            <h2>
+              Heading
+            </h2>
+
+            <p>
+              Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+              massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+              euismod. Donec sed odio dui.
+            </p>
+
+            <p>
+              <a class="rock-button" href="#">View details »</a>
+            </p>
+          </div>
+          <div class="rock-col-md-4 rock-column">
+            <h2>
+              Heading
+            </h2>
+
+            <p>
+              Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+              massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+              euismod. Donec sed odio dui.
+            </p>
+
+            <p>
+              <a class="rock-button" href="#">View details »</a>
+            </p>
+          </div>
+          <div class="rock-col-md-4 rock-column">
+            <h2>
+              Heading
+            </h2>
+
+            <p>
+              Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+              massa justo sit amet risus. Etiam porta sem malesuada magna mollis
+              euismod. Donec sed odio dui.
+            </p>
+
+            <p>
+              <a class="rock-button" href="#">View details »</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/row-->
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // alert($('#download-layout').html());
+    });
+  </script>
+</div>
+<!--/.fluid-container-->
+
+<script type="text/javascript">
+
+  function saveLayout() {
+    return;
+    $.ajax({
+      type: "POST",
+      url: "/build_v3/saveLayout",
+      data: {'layout-v3': $('.demo').html()},
+      success: function (data) {
+        //updateButtonsVisibility();
+      }
+    });
+  }
+
+  //下载代码
+  function downloadLayout() {
+    $.ajax({
+      type: "POST",
+      url: "/build_v3/downloadLayout",
+      data: {'layout-v3': $('#download-layout').html()},
+      success: function (data) {
+        window.location.href = '/build_v3/download';
+      }
+    });
+  }
+
+  function downloadHtmlLayout() {
+    $.ajax({
+      type: "POST",
+      url: "/build_v3/downloadLayout",
+      data: {'layout-v3': $('#download-layout').html()},
+      success: function (data) {
+        window.location.href = '/build_v3/downloadHtml';
+      }
+    });
+  }
+
+  function undoLayout() {
+
+    $.ajax({
+      type: "POST",
+      url: "/build_v3/getPreviousLayout",
+      data: {},
+      success: function (data) {
+        undoOperation(data);
+      }
+    });
+  }
+
+  function redoLayout() {
+
+    $.ajax({
+      type: "POST",
+      url: "/build_v3/getPreviousLayout",
+      data: {},
+      success: function (data) {
+        redoOperation(data);
+      }
+    });
+  }
+
+  $(document).on('hidden.bs.modal', function (e) {
+    $(e.target).removeData('bs.modal');
+  });
+
+  $('body').on('click', '#continue-share-non-logged', function () {
+    $('#share-not-logged').hide();
+    $('#share-logged').removeClass('rock-hide');
+    $('#share-logged').show();
+  });
+
+  $('body').on('click', '#continue-download-non-logged', function () {
+    $('#download-not-logged').hide();
+    $('#download').removeClass('rock-hide');
+    $('#download').show();
+    $('#downloadhtml').removeClass('rock-hide');
+    $('#downloadhtml').show();
+    $('#download-logged').removeClass('rock-hide');
+    $('#download-logged').show();
+  });
+
+
+</script>
+
+<div style="display: none;" class="rock-modal fade" id="downloadModal" tabindex="-1" role="dialog"
+     aria-labelledby="downloadModalLabel" aria-hidden="true">
+  <div class="rock-modal-dialog">
+    <div class="rock-modal-content">
+      <div class="rock-modal-header">
+        <button type="button" class="rock-close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="rock-modal-title">Download</h4>
+      </div>
+      <div class="rock-modal-body">
+
+        <div id="download-logged" class="">
+          <div class="rock-alert alert-info">Copy and paste! Enjoy :)
+          </div>
+          <p>
+				<textarea>&lt;div class="rock-container"&gt;
+	&lt;div class="rock-row rock-clearfix"&gt;
+		&lt;div class="rock-col-md-12 rock-column"&gt;
+			&lt;nav class="rock-navbar navbar-default" role="navigation"&gt;
+				&lt;div class="rock-navbar-header"&gt;
+					 &lt;button type="button" class="rock-navbar-toggle" 
+data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"&gt; 
+&lt;span class="rock-sr-only"&gt;Toggle navigation&lt;/span&gt;&lt;span 
+class="rock-icon-bar"&gt;&lt;/span&gt;&lt;span 
+class="rock-icon-bar"&gt;&lt;/span&gt;&lt;span 
+class="rock-icon-bar"&gt;&lt;/span&gt;&lt;/button&gt; &lt;a 
+class="rock-navbar-brand" href="#"&gt;Brand&lt;/a&gt;
+				&lt;/div&gt;
+				
+				&lt;div class="rock-collapse navbar-collapse" 
+id="bs-example-navbar-collapse-1"&gt;
+					&lt;ul class="rock-nav navbar-nav"&gt;
+						&lt;li class="rock-active"&gt;
+							 &lt;a href="#"&gt;Link&lt;/a&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							 &lt;a href="#"&gt;Link&lt;/a&gt;
+						&lt;/li&gt;
+						&lt;li class="rock-dropdown"&gt;
+							 &lt;a href="#" class="rock-dropdown-toggle" 
+data-toggle="dropdown"&gt;Dropdown&lt;strong 
+class="rock-caret"&gt;&lt;/strong&gt;&lt;/a&gt;
+							&lt;ul class="rock-dropdown-menu"&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;Action&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;Another action&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;Something else here&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li class="rock-divider"&gt;
+								&lt;/li&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;Separated link&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li class="rock-divider"&gt;
+								&lt;/li&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;One more separated link&lt;/a&gt;
+								&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;form class="rock-navbar-form rock-navbar-left" role="search"&gt;
+						&lt;div class="rock-form-group"&gt;
+							&lt;input class="rock-form-control" type="text" /&gt;
+						&lt;/div&gt; &lt;button type="submit" class="rock-button 
+button-default"&gt;Submit&lt;/button&gt;
+					&lt;/form&gt;
+					&lt;ul class="rock-nav rock-navbar-nav rock-navbar-right"&gt;
+						&lt;li&gt;
+							 &lt;a href="#"&gt;Link&lt;/a&gt;
+						&lt;/li&gt;
+						&lt;li class="rock-dropdown"&gt;
+							 &lt;a href="#" class="rock-dropdown-toggle" 
+data-toggle="dropdown"&gt;Dropdown&lt;strong 
+class="rock-caret"&gt;&lt;/strong&gt;&lt;/a&gt;
+							&lt;ul class="rock-dropdown-menu"&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;Action&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;Another action&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;Something else here&lt;/a&gt;
+								&lt;/li&gt;
+								&lt;li class="rock-divider"&gt;
+								&lt;/li&gt;
+								&lt;li&gt;
+									 &lt;a href="#"&gt;Separated link&lt;/a&gt;
+								&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				
+			&lt;/nav&gt;
+			&lt;div class="rock-jumbotron"&gt;
+				&lt;h1&gt;
+					Here Rockskeleton!
+				&lt;/h1&gt;
+				&lt;p&gt;
+					Essentially, what Rockskeleton does is reduce the time needed to get a modern website up and running.
+Rockskeleton. is one of the most popular web development frameworks out there, and it is used 
+for developing highly-responsive projects in HTML, CSS, and JavaScript.
+				&lt;/p&gt;
+				&lt;p&gt;
+					 &lt;a class="rock-button rock-button-primary rock-button-large" href="#"&gt;Learn 
+more&lt;/a&gt;
+				&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="rock-row rock-clearfix"&gt;
+		&lt;div class="rock-col-md-4 rock-column"&gt;
+			&lt;h2&gt;
+				Heading
+			&lt;/h2&gt;
+			&lt;p&gt;
+				Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus, 
+tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum 
+massa justo sit amet risus. Etiam porta sem malesuada magna mollis 
+euismod. Donec sed odio dui.
+			&lt;/p&gt;
+			&lt;p&gt;
+				 &lt;a class="rock-button" href="#"&gt;View details »&lt;/a&gt;
+			&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="rock-col-md-4 rock-column"&gt;
+			&lt;h2&gt;
+				Heading
+			&lt;/h2&gt;
+			&lt;p&gt;
+				Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus, 
+tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum 
+massa justo sit amet risus. Etiam porta sem malesuada magna mollis 
+euismod. Donec sed odio dui.
+			&lt;/p&gt;
+			&lt;p&gt;
+				 &lt;a class="rock-button" href="#"&gt;View details »&lt;/a&gt;
+			&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="rock-col-md-4 rock-column"&gt;
+			&lt;h2&gt;
+				Heading
+			&lt;/h2&gt;
+			&lt;p&gt;
+				Fusce sagittis metus eu rhoncus pellentesque. Fusce dapibus, 
+tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum 
+massa justo sit amet risus. Etiam porta sem malesuada magna mollis 
+euismod. Donec sed odio dui.
+			&lt;/p&gt;
+			&lt;p&gt;
+				 &lt;a class="rock-button" href="#"&gt;View details »&lt;/a&gt;
+			&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</textarea>
+          </p>
+        </div>
+
+      </div>
+      <div class="rock-modal-footer">
+        <button type="button" class="rock-button rock-button-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+
+  <script type="text/javascript">
+    downloadLayoutSrc();
+    $('#modal-download-sign-in-button').click(function (event) {
+      $('.help-inline').hide();
+      var form = $('#boxDownloadLoginForm');
+      var ajaxLoginUrl = '/login/ajaxLogin';
+      jQuery.ajax({
+        type: "post",
+        dataType: "json",
+        url: ajaxLoginUrl,
+        data: form.serialize(),
+        success: function (response) {
+          if (response.success) {
+            $('#download-not-logged').hide();
+            $('#download').removeClass('rock-hide');
+            $('#download').show();
+            $('#downloadhtml').removeClass('rock-hide');
+            $('#downloadhtml').show();
+            $('#download-logged').removeClass('rock-hide');
+            $('#download-logged').show();
+          } else {
+            if (response.errors && response.errors.length > 0) {
+              $.each(response.errors, function (i, item) {
+                $('#' + item.field + '-download-error').html(item.error);
+                $('#' + item.field + '-download-error').show();
+              });
+            }
+          }
+        },
+        error: function (response) {
+
+        }
+      });
+
+      return false;
+    });
+  </script>
+
+</div>
+
+<div class="rock-modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel"
+     aria-hidden="true"></div>
+<div style="display: none;" class="rock-modal fade" id="feedbackModal" tabindex="-1" role="dialog"
+     aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="rock-modal-dialog">
+    <div class="rock-modal-content">
+      <div class="rock-modal-header">
+        <button type="button" class="rock-close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="rock-modal-title">Contact</h4>
+      </div>
+      <div class="rock-modal-body">
+
+        <div id="download-logged" class="">
+          <div class="rock-alert alert-info">
+            Github:
+            <a href="https://github.com/savokiss/layoutit">https://github.com/savokiss/layoutit</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+
+
+</body>
+</html>

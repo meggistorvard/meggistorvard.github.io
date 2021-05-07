@@ -1,0 +1,24 @@
+{
+  "name": "irockskeleton",
+  "authors": [
+    "meggistorvard <tecnology2002-meggis@yahoo.it>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rockskeleton": "~3.3.7",
+    "html5shiv": "~3.7.3",
+    "jquery-htmlclean": "~1.4.0",
+    "jquery-ui": "~1.11.4"
+  }
+}
