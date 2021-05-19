@@ -13,62 +13,116 @@
     <link href="resources/css/rockskeleton.min.css" rel="stylesheet">
     <!-- Rockskeleton theme -->
     <link href="resources/css/rockskeleton-theme.css" rel="stylesheet">
-    <link href="theme.css" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<style>
+	nav a {
+	  padding-top: 20px !important;
+	  padding-bottom: 20px !important;
+	  font-size: 18px;
+	}
+
+	nav .rock-navbar-toggle {
+	  margin: 13px 15px 13px 0;
+	}
+
+	.rock-navbar-brand {
+	  font-size: 30px;
+	}
+	nav.rock-navbar.rock-shrink {
+	  min-height: 35px;
+	}
+
+	nav.rock-shrink a {
+	  padding-top: 10px !important;
+	  padding-bottom: 10px !important;
+	  font-size: 15px;
+	}
+
+	nav.rock-shrink .rock-navbar-brand {
+	  font-size: 25px;
+	}
+
+	nav.rock-shrink .rock-navbar-toggle {
+	  padding: 4px 5px;
+	  margin: 8px 15px 8px 0;
+	}
+	</style>
+	<script>
+	$(document).ready(function() {
+	$(window).scroll(function() {
+	  if ($(document).scrollTop() > 50) {
+		$('nav').addClass('rock-shrink');
+	  } else {
+		$('nav').removeClass('rock-shrink');
+	  }
+	});
+	});
+	</script>
   </head>
   <body>
     <section>
       <div class="rock-container">
         <div class="rock-row rock-clearfix">
           <div class="rock-col-md-12 rock-column">
-            <ul class="rock-nav rock-nav-tabs">
-              <li class="rock-active">
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li class="rock-disabled">
-                <a href="#">Contact</a>
-              </li>
-              <li class="rock-dropdown rock-pull-right">
-                <a href="#" data-toggle="dropdown" class="rock-dropdown-toggle">Dropdown<strong class="rock-caret"></strong></a>
-                <ul class="rock-dropdown-menu">
-                  <li>
-                    <a href="datatables/examples/index.html">Datatables 1.9</a>
-                  </li>
-                  <li>
-                    <a href="layoutit-for-rockskeleton/index.html">layoutit rockskeleton</a>
-                  </li>
-                  <li class="rock-divider">
-                  </li>
-                  <li><a href="samplepage/blog/index.html">blog</a></li>
-				  <li><a href="samplepage/carousel/index.html">carousel</a></li>
-				  <li><a href="samplepage/cover/index.html">cover</a></li>
-				  <li><a href="samplepage/dashboard/index.html">dashboard</a></li>
-				  <li><a href="samplepage/grid/index.html">grid</a></li>
-				  <li><a href="samplepage/jumbotron-narrow/index.html">jumbotron narrow</a></li>
-				  <li><a href="samplepage/jumbotron/index.html">jumbotron</a></li>
-				  <li><a href="samplepage/justified-nav/index.html">justified nav</a></li>
-				  <li><a href="samplepage/modal/index.html">modal</a></li>
-				  <li><a href="samplepage/navbar-fixed-top/index.html">navbar fixed top</a></li>
-				  <li><a href="samplepage/navbar-static-top/index.html">navbar static top</a></li>
-				  <li><a href="samplepage/navbar/index.html">navbar</a></li>
-				  <li><a href="samplepage/non-responsive/index.html">non responsive</a></li>
-				  <li><a href="samplepage/offcanvas/index.html">offcanvas</a></li>
-				  <li><a href="samplepage/panels/index.html">panels</a></li>
-				  <li><a href="samplepage/signin/index.html">signin</a></li>
-				  <li><a href="samplepage/starter-template/index.html">starter template</a></li>
-				  <li><a href="samplepage/sticky-footer-navbar/index.html">sticky footer navbar</a></li>
-				  <li><a href="samplepage/sticky-footer/index.html">sticky footer</a></li>
-				  <li><a href="samplepage/tooltip-viewport/index.html">tooltip viewport</a></li>				  
-                </ul>
-              </li>
-            </ul>
+            <nav class="rock-navbar rock-navbar-inverse rock-navbar-fixed-top">
+			  <div class="rock-container">
+				<div class="rock-navbar-header">
+				  <button type="button" class="rock-navbar-toggle" data-toggle="collapse" data-target=".rock-navbar-collapse">
+					<span class="rock-icon-bar"></span>
+					<span class="rock-icon-bar"></span>
+					<span class="rock-icon-bar"></span>
+				  </button>
+				  <a class="rock-navbar-brand" href="#">meggistorvard.github.io </a>
+				</div>
+				<div class="rock-collapse rock-navbar-collapse">
+				  <ul class="rock-nav rock-navbar-nav rock-pull-right">
+					<li class="rock-active"><a href="http://meggistorvard.github.io">Home</a></li>
+					<li><a href="datatables/examples/index.html">Datatables 1.9</a></li>
+					<li><a href="layoutit-for-rockskeleton/index.html">Layoutit Rockskeleton</a></li>
+					<li><a href="samplepage/css/index.html">CSS Rockskeleton</a></li>
+					<li class="rock-dropdown rock-pull-right">
+						<a href="#" data-toggle="dropdown" class="rock-dropdown-toggle">Pages demo<strong class="rock-caret"></strong></a>
+						<ul class="rock-dropdown-menu">						  
+						  <li><a href="samplepage/blog/index.html">blog</a></li>
+						  <li><a href="samplepage/carousel/index.html">carousel</a></li>
+						  <li><a href="samplepage/cover/index.html">cover</a></li>
+						  <li><a href="samplepage/dashboard/index.html">dashboard</a></li>
+						  <li><a href="samplepage/grid/index.html">grid</a></li>
+						  <li><a href="samplepage/jumbotron-narrow/index.html">jumbotron narrow</a></li>
+						  <li><a href="samplepage/jumbotron/index.html">jumbotron</a></li>
+						  <li><a href="samplepage/justified-nav/index.html">justified nav</a></li>
+						  <li class="rock-divider">
+						  </li>
+						  <li><a href="samplepage/modal/index.html">modal</a></li>
+						  <li><a href="samplepage/navbar-fixed-top/index.html">navbar fixed top</a></li>
+						  <li><a href="samplepage/navbar-static-top/index.html">navbar static top</a></li>
+						  <li><a href="samplepage/navbar/index.html">navbar</a></li>
+						  <li><a href="samplepage/non-responsive/index.html">non responsive</a></li>
+						  <li><a href="samplepage/offcanvas/index.html">offcanvas</a></li>
+						  <li><a href="samplepage/panels/index.html">panels</a></li>
+						  <li><a href="samplepage/signin/index.html">signin</a></li>
+						  <li><a href="samplepage/starter-template/index.html">starter template</a></li>
+						  <li><a href="samplepage/sticky-footer-navbar/index.html">sticky footer navbar</a></li>
+						  <li><a href="samplepage/sticky-footer/index.html">sticky footer</a></li>
+						  <li><a href="samplepage/tooltip-viewport/index.html">tooltip viewport</a></li>				  
+						</ul>
+					  </li>
+				  </ul>
+				</div><!--/.nav-collapse -->
+			  </div>
+			</nav>
+			
+			
+          </div>
+        </div>
+
+		<div class="rock-row rock-clearfix">
+		<div class="rock-col-md-12 rock-column" style="margin-top: 120px;">
             <div class="rock-jumbotron rock-well">
               <h1>
                 Demo code and sample
@@ -81,27 +135,28 @@
                 <a class="rock-button rock-button-primary rock-button-large" href="https://meggistorvard.github.io/layoutit-for-rockskeleton/index.html">Try layout it!</a>
               </p>
             </div>
-          </div>
+			</div>	
         </div>
+			
         <div class="rock-row rock-clearfix">
           <div class="rock-col-md-4 rock-column">
             <h2>
               Button Group
             </h2>
-            <pre>
-              &lt;button class="rock-button rock-button-default" type="button"&gt;
-              &lt;em class="glyphicon glyphicon-align-left"&gt;&lt;/em&gt; left
-              &lt;/button&gt;
-              &lt;button class="rock-button rock-button-default" type="button"&gt;
-              &lt;em class="glyphicon glyphicon-align-center"&gt;&lt;/em&gt; center
-              &lt;/button&gt;
-              &lt;button class="rock-button rock-button-default" type="button"&gt;
-              &lt;em class="glyphicon glyphicon-align-right"&gt;&lt;/em&gt; right
-              &lt;/button&gt;
-              &lt;button class="rock-button rock-button-default" type="button"&gt;
-              &lt;em class="glyphicon glyphicon-align-justify"&gt;&lt;/em&gt; justify
-              &lt;/button&gt;
-            </pre>
+<pre>
+  &lt;button class="rock-button rock-button-default" type="button"&gt;
+  &lt;em class="glyphicon glyphicon-align-left"&gt;&lt;/em&gt; left
+  &lt;/button&gt;
+  &lt;button class="rock-button rock-button-default" type="button"&gt;
+  &lt;em class="glyphicon glyphicon-align-center"&gt;&lt;/em&gt; center
+  &lt;/button&gt;
+  &lt;button class="rock-button rock-button-default" type="button"&gt;
+  &lt;em class="glyphicon glyphicon-align-right"&gt;&lt;/em&gt; right
+  &lt;/button&gt;
+  &lt;button class="rock-button rock-button-default" type="button"&gt;
+  &lt;em class="glyphicon glyphicon-align-justify"&gt;&lt;/em&gt; justify
+  &lt;/button&gt;
+</pre>
 
             <div class="rock-button-group">
               <button class="rock-button rock-button-default" type="button"><em class="glyphicon glyphicon-align-left"></em> left</button> <button class="rock-button rock-button-default" type="button"><em class="glyphicon glyphicon-align-center"></em> center</button> <button class="rock-button rock-button-default" type="button"><em class="glyphicon glyphicon-align-right"></em> right</button> <button class="rock-button rock-button-default" type="button"><em class="glyphicon glyphicon-align-justify"></em> justify</button>
@@ -112,8 +167,8 @@
               Dropdown
             </h2>
             <p><pre>
-              &lt;div class="rock-button-group"&gt;
-  &lt;button class="rock-button rock-button-default"&gt;Action&lt;/button&gt; &lt;button data-toggle="dropdown" class="rock-button rock-button-default rock-dropdown-toggle"&gt;&lt;span class="rock-caret"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;div class="rock-button-group"&gt;
+&lt;button class="rock-button rock-button-default"&gt;Action&lt;/button&gt; &lt;button data-toggle="dropdown" class="rock-button rock-button-default rock-dropdown-toggle"&gt;&lt;span class="rock-caret"&gt;&lt;/span&gt;&lt;/button&gt;
   &lt;ul class="rock-dropdown-menu"&gt;
     &lt;li&gt;
       &lt;a href="#"&gt;Option 1&lt;/a&gt;
@@ -129,9 +184,6 @@
   &lt;/ul&gt;
 &lt;/div&gt;
             </pre></p>
-            <p>
-              <a class="rock-button" href="#">View details »</a>
-            </p>
             <div class="rock-button-group">
               <button class="rock-button rock-button-default">Action</button> <button data-toggle="dropdown" class="rock-button rock-button-default rock-dropdown-toggle"><span class="rock-caret"></span></button>
               <ul class="rock-dropdown-menu">
@@ -154,7 +206,7 @@
               Pagination
             </h2>
             <p><pre>
-              &lt;ul class="rock-pagination"&gt;
+&lt;ul class="rock-pagination"&gt;
   &lt;li&gt;
     &lt;a href="#"&gt;Prev&lt;/a&gt;
   &lt;/li&gt;
@@ -178,9 +230,6 @@
   &lt;/li&gt;
 &lt;/ul&gt;
             </pre></p>
-            <p>
-              <a class="rock-button" href="#">View details »</a>
-            </p>
             <ul class="rock-pagination">
               <li>
                 <a href="#">Prev</a>
@@ -244,14 +293,14 @@
             <p>
               <pre>
 			  Sample code
-			  &lt;h3&gt;
-				&lt;span class="rock-label rock-label-default"&gt;Default&lt;/span&gt;
-				&lt;span class="rock-label rock-label-primary"&gt;Primary&lt;/span&gt;
-				&lt;span class="rock-label rock-label-success"&gt;Success&lt;/span&gt;
-				&lt;span class="rock-label rock-label-info"&gt;Info&lt;/span&gt;
-				&lt;span class="rock-label rock-label-warning"&gt;Warning&lt;/span&gt;
-				&lt;span class="rock-label rock-label-danger"&gt;Danger&lt;/span&gt;
-			  &lt;/h3&gt;
+&lt;h3&gt;
+  &lt;span class="rock-label rock-label-default"&gt;Default&lt;/span&gt;
+  &lt;span class="rock-label rock-label-primary"&gt;Primary&lt;/span&gt;
+  &lt;span class="rock-label rock-label-success"&gt;Success&lt;/span&gt;
+  &lt;span class="rock-label rock-label-info"&gt;Info&lt;/span&gt;
+  &lt;span class="rock-label rock-label-warning"&gt;Warning&lt;/span&gt;
+  &lt;span class="rock-label rock-label-danger"&gt;Danger&lt;/span&gt;
+&lt;/h3&gt;
 			  </pre>
             </p>
           </div>
@@ -289,7 +338,9 @@
 			<div class="rock-progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="rock-sr-only">80% Complete (danger)</span></div>
 			<p>
 			  <pre>
-			  &lt;div class="rock-progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"&gt;&lt;span class="rock-sr-only"&gt;80% Complete (danger)&lt;/span&gt;&lt;/div&gt;
+&lt;div class="rock-progress"&gt;			  
+&lt;div class="rock-progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"&gt;&lt;span class="rock-sr-only"&gt;80% Complete (danger)&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
 			  </pre>
 			</p>
 			<h2>
