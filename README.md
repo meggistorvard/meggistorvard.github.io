@@ -54,14 +54,14 @@ Donate to Meggis and help us improve free software
 There are a number of ways in which you can support us and help make a huge difference to our charity whether it be financially, with your time or donating equipment! 
 
 WAYS YOU CAN SUPPORT US
-	Make a donation
-	Donate software & hardware
-	Recommend a game
-	Provide keys
-	Volunteer
-	Follow our stream on twitch
-	Fundraising ideas
-	Become an ambassador
+,Make a donation
+,Donate software & hardware
+,Recommend a game
+,Provide keys
+,Volunteer
+,Follow our stream on twitch
+,Fundraising ideas
+,Become an ambassador
 
-Supporting further development	
+Supporting further development,
  <a href="https://www.techsupport.gradiscake.com/?q=donations-free-software" target="_blank">https://www.techsupport.gradiscake.com/?q=donations-free-software</a>

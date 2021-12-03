@@ -51,7 +51,7 @@ function(r) {
     r(t).on("click", e, this.close)
   }
   var e = '[data-dismiss="alert"]';
-  s.VERSION = "1.3", s.TRANSITION_DURATION = 150, s.prototype.close = function(t) {
+  s.VERSION = "1.3.7", s.TRANSITION_DURATION = 150, s.prototype.close = function(t) {
     var e = r(this),
       o = (o = e.attr("data-target")) || (o = e.attr("href")) && o.replace(/.*(?=#[^\s]*$)/, ""),
       i = r("#" === o ? [] : o);
@@ -86,7 +86,7 @@ function(r) {
       e || t.data("rk.button", e = new n(this, o)), "toggle" == i ? e.toggle() : i && e.setState(i)
     })
   }
-  n.VERSION = "1.3", n.DEFAULTS = {
+  n.VERSION = "1.3.7", n.DEFAULTS = {
     loadingText: "loading..."
   }, n.prototype.setState = function(t) {
     var e = "disabled",
@@ -125,7 +125,7 @@ function(c) {
       e || t.data("rk.carousel", e = new h(this, o)), "number" == typeof n ? e.to(n) : i ? e[i]() : o.interval && e.pause().cycle()
     })
   }
-  h.VERSION = "1.3", h.TRANSITION_DURATION = 600, h.DEFAULTS = {
+  h.VERSION = "1.3.7", h.TRANSITION_DURATION = 600, h.DEFAULTS = {
     interval: 5e3,
     pause: "hover",
     wrap: !0,
@@ -225,7 +225,7 @@ function(n) {
       !e && o.toggle && /show|hide/.test(i) && (o.toggle = !1), e || t.data("rk.collapse", e = new r(this, o)), "string" == typeof i && e[i]()
     })
   }
-  r.VERSION = "1.3", r.TRANSITION_DURATION = 350, r.DEFAULTS = {
+  r.VERSION = "1.3.7", r.TRANSITION_DURATION = 350, r.DEFAULTS = {
     toggle: !0
   }, r.prototype.dimension = function() {
     return this.$element.hasClass("width") ? "width" : "height"
@@ -305,7 +305,7 @@ function(n) {
       e.hasClass("rock-open") && (i && "click" == i.type && /input|textarea/i.test(i.target.tagName) && n.contains(e[0], i.target) || (e.trigger(i = n.Event("hide.rk.dropdown", o)), i.isDefaultPrevented() || (t.attr("aria-expanded", "false"), e.removeClass("rock-open").trigger(n.Event("hidden.rk.dropdown", o)))))
     }))
   }
-  i.VERSION = "1.3", i.prototype.toggle = function(t) {
+  i.VERSION = "1.3.7", i.prototype.toggle = function(t) {
     var e = n(this);
     if (!e.is(".disabled, :disabled")) {
       var o = s(e),
@@ -362,7 +362,7 @@ function(r) {
       e || t.data("rk.modal", e = new s(this, o)), "string" == typeof i ? e[i](n) : o.show && e.show(n)
     })
   }
-  s.VERSION = "1.3", s.TRANSITION_DURATION = 300, s.BACKDROP_TRANSITION_DURATION = 150, s.DEFAULTS = {
+  s.VERSION = "1.3.7", s.TRANSITION_DURATION = 300, s.BACKDROP_TRANSITION_DURATION = 150, s.DEFAULTS = {
     backdrop: !0,
     keyboard: !0,
     show: !0
@@ -464,7 +464,7 @@ function(l) {
   function c(t, e) {
     this.type = null, this.options = null, this.enabled = null, this.timeout = null, this.hoverState = null, this.$element = null, this.inState = null, this.init("tooltip", t, e)
   }
-  c.VERSION = "1.3", c.TRANSITION_DURATION = 150, c.DEFAULTS = {
+  c.VERSION = "1.3.7", c.TRANSITION_DURATION = 150, c.DEFAULTS = {
     animation: !0,
     placement: "top",
     selector: !1,
@@ -664,7 +664,7 @@ function(n) {
     this.init("popover", t, e)
   }
   if (!n.fn.tooltip) throw new Error("Popover requires tooltip.js");
-  r.VERSION = "1.3", r.DEFAULTS = n.extend({}, n.fn.tooltip.Constructor.DEFAULTS, {
+  r.VERSION = "1.3.7", r.DEFAULTS = n.extend({}, n.fn.tooltip.Constructor.DEFAULTS, {
     placement: "right",
     trigger: "click",
     content: "",
@@ -712,7 +712,7 @@ function(n) {
       e || t.data("rk.scrollspy", e = new r(this, o)), "string" == typeof i && e[i]()
     })
   }
-  r.VERSION = "1.3", r.DEFAULTS = {
+  r.VERSION = "1.3.7", r.DEFAULTS = {
     offset: 10
   }, r.prototype.getScrollHeight = function() {
     return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
@@ -773,7 +773,7 @@ function(s) {
       e || t.data("rk.tab", e = new a(this)), "string" == typeof o && e[o]()
     })
   }
-  a.VERSION = "1.3", a.TRANSITION_DURATION = 150, a.prototype.show = function() {
+  a.VERSION = "1.3.7", a.TRANSITION_DURATION = 150, a.prototype.show = function() {
     var t, e, o, i = this.element,
       n = i.closest("ul:not(.rock-dropdown-menu)"),
       r = (r = i.data("target")) || (r = i.attr("href")) && r.replace(/.*(?=#[^\s]*$)/, "");
@@ -822,7 +822,7 @@ function(s) {
       e || t.data("rk.affix", e = new a(this, o)), "string" == typeof i && e[i]()
     })
   }
-  a.VERSION = "1.3", a.RESET = "rock-affix rock-affix-top rock-affix-bottom", a.DEFAULTS = {
+  a.VERSION = "1.3.7", a.RESET = "rock-affix rock-affix-top rock-affix-bottom", a.DEFAULTS = {
     offset: 0,
     target: window
   }, a.prototype.getState = function(t, e, o, i) {
